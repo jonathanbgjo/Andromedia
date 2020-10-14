@@ -8,7 +8,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     module: {
-        rules: [
+        rules:[
             {
                 test: /\.jsx?$/,
                 exclude: /(node_modules)/,
