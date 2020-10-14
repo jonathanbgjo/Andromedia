@@ -16,13 +16,31 @@ import LogInFormContainer from './session_form/login_form_container';
 // import BenchFormContainer from './bench_form/bench_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
 
-const App = () => (
+const App = () => {
+    let state = 1;
+    return (
     <div>
         <header>
-            <Link to="/" className="header-link">
-                <h1>Andromedia</h1>
-            </Link>
-            {/* <GreetingContainer /> */}
+            <nav className="top-nav">
+                <section className="nav-container-logo">    
+                    <img src="" alt="logo" className="welcome--logo" />
+                    <Link to="/">
+                        <h1>Andromedia</h1>
+                    </Link>
+                </section>
+
+                <section className ="search">
+                    <input type="text"/>Searchbar goes here
+                </section>
+                {/* SearchContainer */}
+
+
+                {/* <DropdownButton></DropdownButton> */}
+                <section className="nav-container">
+                    <Link to={'/'}>DROPDOWN?</Link>
+                    <Link to={'/'}>SIGN IN</Link>
+                </section>
+            </nav>
         </header>
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
@@ -32,6 +50,7 @@ const App = () => (
             {/* <Route exact path="/" component={SearchContainer} /> */}
         </Switch>
     </div>
-);
+    )
+};
 
 export default App;
