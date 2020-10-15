@@ -20,3 +20,21 @@ section {
 body{
     background-color: darkgray;
 }
+
+.login-form-container{
+    display:flex;
+    align-items:center;
+    margin: 0% auto;
+    border: 1px solid grey;
+    width: 250px;
+    height: 250px;
+    margin-top: 200px;
+}
+
+.loginLink{
+    // text-decoration:  none;
+    border: 1px solid lightblue;
+    margin-right: 25px;
+    color: lightblue;
+    font-size: 20px;
+}

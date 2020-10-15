@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -38,7 +39,15 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to Andromedia!
+                    Welcome to  <Link to="/">
+                        Andromedia
+                    </Link>
+                    <br></br>
+                    {this.props.formType==="login" ? <Link to="/signup">
+                        SignUp
+                    </Link> : <Link to="/login">
+                            Login
+                    </Link>}
           <br />
           {/* Please {this.props.formType} or {this.props.navLink} */}
                     {this.renderErrors()}
