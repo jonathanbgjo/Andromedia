@@ -4,11 +4,13 @@
     position: sticky;
     width: 100%;
     justify-content: space-between;
-    background-color: grey;
-    top:0;
+    background-color: white;
+    // top:0;
     overflow:hidden;
     align-items:center;
-    margin: auto;
+    // margin: auto;
+    margin: 0;
+  padding: 0;
 }
 
 section {
@@ -18,7 +20,7 @@ section {
     margin-left: 50px
 }
 body{
-    background-color: darkgray;
+    background-color: white;
 }
 
 .login-form-container{
@@ -27,7 +29,7 @@ body{
     margin: 0% auto;
     border: 1px solid grey;
     width: 250px;
-    height: 250px;
+    height: 200px;
     margin-top: 200px;
 }
 
@@ -37,4 +39,8 @@ body{
     margin-right: 25px;
     color: lightblue;
     font-size: 20px;
+}
+
+ul{
+    list-style: none
 }

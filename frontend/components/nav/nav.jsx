@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import Dropdown from 'react-dropdown'
 const Nav = ({ currentUser, logout }) =>{
-    console.log(currentUser)
+    console.log(logout)
         // const options = ["Profile", "Home", "Signout"]
         // const defaultOption = options[0]
         let loggedIn = true
@@ -21,7 +21,14 @@ const Nav = ({ currentUser, logout }) =>{
 
             <section className="dropdown">
                 <h2 className="header-name">Hi, {currentUser.username}!</h2>
-                <button className="header-button" onClick={logout}>Log Out</button>
+                <img src="" alt="logo" className="welcome--logo" />
+                {/* <button className="header-button" onClick={logout}>Log Out</button> */}
+                <ul>
+                    <li> <Link to="profile"> Profile</Link> </li>
+                    <li> <Link to="something"> Home</Link> </li>
+                    <li> <Link to="something"> Random Video?</Link> </li>
+                    <li> <a onClick={logout}> Logout </a> </li>
+                </ul>
             </section>
         </nav>
     );
@@ -35,7 +42,7 @@ const Nav = ({ currentUser, logout }) =>{
             </section>
 
             <section className="search">
-                <input type="text" />Searchbar goes here
+                <input type="text" /> Searchbar goes here
             </section>
             <div>
                 <Link to="/login">Login</Link>
