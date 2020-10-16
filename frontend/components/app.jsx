@@ -32,7 +32,9 @@ const App = () => {
             <Route path="/benches/:benchId" component={BenchShowContainer} /> */}
             {/* <Route exact path="/" component={SearchContainer} /> */}
             <Route path="/user/:userId" component={ProfileContainer} /> */
-            <Route path="/" component={NavContainer} />
+            <Route exact path="/" component={NavContainer} />
+            <Redirect from='*' to='/' />
+            {/* <Redirect to="/"> </Redirect> */}
         </Switch>
     </div>
     )

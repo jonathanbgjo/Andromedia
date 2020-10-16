@@ -7,14 +7,13 @@ class Nav extends React.Component {
             open: false,
         }
         this.currentUser = this.props.currentUser;
-        this.logout = this.props.logout;
+        this.logout = this.props.logout.bind(this);
         this.sessionLinks = this.sessionLinks.bind(this)
         this.dropdownLinks = this.dropdownLinks.bind(this)
         this.handleButtonClick = this.handleButtonClick.bind(this)
         this.handleClickOutside = this.handleClickOutside.bind(this)
-        console.log(React.version)
+        // console.log(React.version)
         // console.log(this.logout)
-        // this.handleClickOutside = this.handleClickOutside.bind(this);
         this.container = React.createRef();
     }
     componentDidMount() {
@@ -63,11 +62,12 @@ class Nav extends React.Component {
                 {this.state.open && (
                     <div className="dropdown">
                         <ul>
-                            <li>{this.currentUser.username}</li>
+                            
+                            <p className="topLi"> Hello, {this.currentUser.username}  </p>  
                             <li><Link to={`/user/${this.currentUser.id}`}>Profile</Link></li>
-                            <li> <Link to="/" onClick={this.logout}>Logout</Link> </li>
                             <li><Link to="/linked">LinkedIn</Link></li>
                             <li><Link to="/gh">Github</Link></li>
+                            <li> <button onClick={this.props.logout}>Logout</button> </li>
                         </ul>
                     </div>
                 )}
