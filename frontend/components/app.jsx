@@ -12,6 +12,7 @@ import {
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import NavContainer from './nav/nav_container'
+import ProfileContainer from './profile/profile_container'
 // import SearchContainer from './search/search_container';
 // import BenchShowContainer from './bench_show/bench_show_container';
 // import BenchFormContainer from './bench_form/bench_form_container';
@@ -30,6 +31,7 @@ const App = () => {
             {/* <ProtectedRoute exact path="/benches/new" component={BenchFormContainer} />
             <Route path="/benches/:benchId" component={BenchShowContainer} /> */}
             {/* <Route exact path="/" component={SearchContainer} /> */}
+            <Route path="/user/:userId" component={ProfileContainer} /> */
             <Route path="/" component={NavContainer} />
         </Switch>
     </div>
