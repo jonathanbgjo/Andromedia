@@ -1,13 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import Dropdown from 'react-dropdown'
-const Nav = ({ currentUser, logout }) =>{
-    console.log(logout)
-        // const options = ["Profile", "Home", "Signout"]
-        // const defaultOption = options[0]
-        let loggedIn = true
-    const dropdownLinks = () =>(
-        <nav className="top-nav">
+class Nav extends React.Component { 
+    constructor(props){
+        super(props);
+        this.state = {
+            open: false,
+        }
+        this.currentUser = this.props.currentUser;
+        this.logout = this.props.logout;
+        this.sessionLinks = this.sessionLinks.bind(this)
+        this.dropdownLinks = this.dropdownLinks.bind(this)
+        this.handleButtonClick = this.handleButtonClick.bind(this)
+        
+    }
+    handleButtonClick(){
+        this.setState({open: !this.state.open})
+    };
+    dropdownLinks(){
+        return(<nav className="top-nav">
             <section className="nav-container-logo">
                 <img src="" alt="logo" className="welcome--logo" />
                 <Link to="/">
@@ -19,21 +30,36 @@ const Nav = ({ currentUser, logout }) =>{
                 <input type="text" />Searchbar goes here
             </section>
 
-            <section className="dropdown">
-                <h2 className="header-name">Hi, {currentUser.username}!</h2>
+            <section className="button_container">
+                {/* <h2 className="header-name">Hi, {this.currentUser.username}!</h2>
                 <img src="" alt="logo" className="welcome--logo" />
-                {/* <button className="header-button" onClick={logout}>Log Out</button> */}
+                <button className="header-button" onClick={this.logout}>Log Out</button>
                 <ul>
                     <li> <Link to="profile"> Profile</Link> </li>
                     <li> <Link to="something"> Home</Link> </li>
                     <li> <Link to="something"> Random Video?</Link> </li>
-                    <li> <a onClick={logout}> Logout </a> </li>
-                </ul>
+                    <li> <a onClick={this.logout}> Logout </a> </li>
+                </ul> */}
+
+                <button type="button" className="button" onClick={this.handleButtonClick}>
+                    ☰
+                </button>
+                {this.state.open && (
+                    <div className="dropdown">
+                        <ul>
+                            <li><Link to="/">Profile</Link></li>
+                            <li><Link to="/">Logout</Link></li>
+                            <li><Link to="/">LinkedIn</Link></li>
+                            <li><Link to="/">Github</Link></li>
+                        </ul>
+                    </div>
+                )}
+
             </section>
-        </nav>
-    );
-    const sessionLinks = () => (
-        <nav className="top-nav">
+        </nav>)
+    };
+    sessionLinks(){
+        return(<nav className="top-nav">
             <section className="nav-container-logo">
                 <img src="" alt="logo" className="welcome--logo" />
                 <Link to="/">
@@ -44,15 +70,19 @@ const Nav = ({ currentUser, logout }) =>{
             <section className="search">
                 <input type="text" /> Searchbar goes here
             </section>
-            <div>
-                <Link to="/login">Login</Link>
-                &nbsp;or&nbsp;
-                <Link to="/signup">Sign up!</Link>
+            <div className = "navSignIn">
+                <Link to="/login">Sign In</Link>
+                {/* &nbsp;or&nbsp;
+                <Link to="/signup">Sign up!</Link> */}
             </div>
-        </nav>
-    );
+        </nav>)
+    };
         
-    return currentUser ? dropdownLinks() : sessionLinks();
+    render(){
+        return(
+            this.currentUser ? this.dropdownLinks() : this.sessionLinks()
+        )
+    }    
 
 }
 

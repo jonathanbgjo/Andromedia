@@ -20,9 +20,9 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
 const App = () => {
     return (
     <div>
-        <header>
+        {/* <header>
 
-        </header>
+        </header> */}
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />

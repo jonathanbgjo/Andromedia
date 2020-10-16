@@ -46,18 +46,19 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                <img src="" alt="logo" className="welcome--logo" />
+
+                {/*onclick for logo*/}
+                {/* <img src="" alt="logo" className="login--logo" /> */}
                 <br></br>
-                Welcome to  <Link to="/">Andromedia</Link>
+                <Link to="/"><img src="" alt="logo" className="login--logo" /></Link>
+                
                     <br></br>
-                    {this.props.formType==="login" ? <Link to="/signup">
-                        SignUp
-                    </Link> : <Link to="/login">Login </Link>}
+                    
+                    
                     <br />
         {/* Please {this.props.formType} or {this.props.navLink} */}
                     {this.renderErrors()}
-                    <div className="login-form">
+                <form onSubmit={this.handleSubmit} className="login-form-box">
                         <br />
                         <label>Username:
             <input type="text"
@@ -76,13 +77,12 @@ class SessionForm extends React.Component {
                         </label>
                         <br />
                         <input className="session-submit" type="submit" value={this.props.formType} />
-                    </div>
-                </form>
-                <form onSubmit={this.handleDemo}>
-                    <input type="submit" value="demo user" />
-                </form> 
+                </form>                
+                {this.props.formType === "login" ? <Link to="/signup">
+                    SignUp
+                    </Link> : <Link to="/login">Login </Link>}
+                <button type="submit" onClick={this.handleDemo}>Demo User</button>
 
-                
             </div>
 
         );
