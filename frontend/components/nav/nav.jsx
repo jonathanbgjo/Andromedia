@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Dropdown from 'react-dropdown'
 class Nav extends React.Component { 
     constructor(props){
         super(props);
@@ -12,25 +11,42 @@ class Nav extends React.Component {
         this.sessionLinks = this.sessionLinks.bind(this)
         this.dropdownLinks = this.dropdownLinks.bind(this)
         this.handleButtonClick = this.handleButtonClick.bind(this)
-        
+        this.handleClickOutside = this.handleClickOutside.bind(this)
+        console.log(React.version)
+        // console.log(this.logout)
+        // this.handleClickOutside = this.handleClickOutside.bind(this);
+        this.container = React.createRef();
     }
+    componentDidMount() {
+        document.addEventListener("mousedown", this.handleClickOutside);
+    }
+    componentWillUnmount() {
+        document.removeEventListener("mousedown", this.handleClickOutside);
+    }
+    handleClickOutside(event){
+        if (this.container.current && !this.container.current.contains(event.target)) {
+            this.setState({
+                open: false,
+            });
+        }
+    };
+
     handleButtonClick(){
         this.setState({open: !this.state.open})
     };
     dropdownLinks(){
         return(<nav className="top-nav">
+            
             <section className="nav-container-logo">
-                <img src="" alt="logo" className="welcome--logo" />
-                <Link to="/">
-                    <h1>Andromedia</h1>
-                </Link>
+                <img src={window.logo} alt="logo" className="welcome--logo" />
+                <Link to="/"><h1>Andromedia</h1></Link>
             </section>
 
             <section className="search">
                 <input type="text" />Searchbar goes here
             </section>
 
-            <section className="button_container">
+            <section className="button_container" ref={this.container}>
                 {/* <h2 className="header-name">Hi, {this.currentUser.username}!</h2>
                 <img src="" alt="logo" className="welcome--logo" />
                 <button className="header-button" onClick={this.logout}>Log Out</button>
@@ -40,17 +56,18 @@ class Nav extends React.Component {
                     <li> <Link to="something"> Random Video?</Link> </li>
                     <li> <a onClick={this.logout}> Logout </a> </li>
                 </ul> */}
-
+                {/* <div ref={this.wrapperRef}>{this.props.children}</div> */}
                 <button type="button" className="button" onClick={this.handleButtonClick}>
-                    ☰
+                    <img src={window.pfp} alt="logo" className="pfp" />
                 </button>
                 {this.state.open && (
                     <div className="dropdown">
                         <ul>
-                            <li><Link to="/">Profile</Link></li>
-                            <li><Link to="/">Logout</Link></li>
-                            <li><Link to="/">LinkedIn</Link></li>
-                            <li><Link to="/">Github</Link></li>
+                            <li>{this.currentUser.username}</li>
+                            <li><Link to={`/user/${this.currentUser.id}`}>Profile</Link></li>
+                            <li> <Link to="/" onClick={this.logout}>Logout</Link> </li>
+                            <li><Link to="/linked">LinkedIn</Link></li>
+                            <li><Link to="/gh">Github</Link></li>
                         </ul>
                     </div>
                 )}
@@ -61,7 +78,7 @@ class Nav extends React.Component {
     sessionLinks(){
         return(<nav className="top-nav">
             <section className="nav-container-logo">
-                <img src="" alt="logo" className="welcome--logo" />
+                <img src={window.logo} alt="logo" className="welcome--logo" />
                 <Link to="/">
                     <h1>Andromedia</h1>
                 </Link>

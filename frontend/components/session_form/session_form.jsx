@@ -50,7 +50,7 @@ class SessionForm extends React.Component {
                 {/*onclick for logo*/}
                 {/* <img src="" alt="logo" className="login--logo" /> */}
                 <br></br>
-                <Link to="/"><img src="" alt="logo" className="login--logo" /></Link>
+                <Link to="/"><img src={window.logo} alt="logo" className="login--logo" /></Link>
                 
                     <br></br>
                     
@@ -77,11 +77,15 @@ class SessionForm extends React.Component {
                         </label>
                         <br />
                         <input className="session-submit" type="submit" value={this.props.formType} />
-                </form>                
-                {this.props.formType === "login" ? <Link to="/signup">
+                </form>    
+                <div className="formLinks">
+                    {this.props.formType === "login" ? <Link to="/signup">
                     SignUp
                     </Link> : <Link to="/login">Login </Link>}
-                <button type="submit" onClick={this.handleDemo}>Demo User</button>
+                    {this.props.formType === 'login' ? <button type="submit" onClick={this.handleDemo}>Demo User</button> : ""}
+                </div>            
+                
+                
 
             </div>
 
