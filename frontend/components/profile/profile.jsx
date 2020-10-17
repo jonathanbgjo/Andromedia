@@ -1,4 +1,6 @@
 import React from 'react'
+import Nav from '../nav/nav'
+import NavContainer from '../nav/nav_container'
 
 
 class Profile extends React.Component {
@@ -7,7 +9,6 @@ class Profile extends React.Component {
         console.log(this.props.currentUser)
     }
     componentDidMount(){
-
     }
     render(){
         return(

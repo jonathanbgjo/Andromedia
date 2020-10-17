@@ -21,19 +21,15 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
 const App = () => {
     return (
     <div>
-        {/* <header>
-
-        </header> */}
-        
+        <Route path="/user/:userId" component={ProfileContainer} /> 
+        <Route exact path="/" component={NavContainer} />
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             {/* <ProtectedRoute exact path="/benches/new" component={BenchFormContainer} />
             <Route path="/benches/:benchId" component={BenchShowContainer} /> */}
             {/* <Route exact path="/" component={SearchContainer} /> */}
-            <Route path="/user/:userId" component={ProfileContainer} /> */
-            <Route exact path="/" component={NavContainer} />
-            <Redirect from='*' to='/' />
+            {/* <Redirect from='*' to='/' /> */}
             {/* <Redirect to="/"> </Redirect> */}
         </Switch>
     </div>

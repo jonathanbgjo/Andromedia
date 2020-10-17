@@ -17,7 +17,9 @@ class SessionForm extends React.Component {
             [field]: e.currentTarget.value
         });
     }
-
+    componentWillUnmount(){
+        this.props.clearErrors();
+    }
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
@@ -79,10 +81,10 @@ class SessionForm extends React.Component {
                         <input className="session-submit" type="submit" value={this.props.formType} />
                 </form>    
                 <div className="formLinks">
-                    {this.props.formType === "login" ? <Link to="/signup">
-                    SignUp
+                    {this.props.formType === "Login" ? <Link to="/signup">
+                    Create Account
                     </Link> : <Link to="/login">Login </Link>}
-                    {this.props.formType === 'login' ? <button type="submit" onClick={this.handleDemo}>Demo User</button> : ""}
+                    {this.props.formType === 'Login' ? <button type="submit" onClick={this.handleDemo}>Demo User</button> : ""}
                 </div>            
                 
                 

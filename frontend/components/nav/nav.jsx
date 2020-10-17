@@ -6,8 +6,6 @@ class Nav extends React.Component {
         this.state = {
             open: false,
         }
-        this.currentUser = this.props.currentUser;
-        this.logout = this.props.logout.bind(this);
         this.sessionLinks = this.sessionLinks.bind(this)
         this.dropdownLinks = this.dropdownLinks.bind(this)
         this.handleButtonClick = this.handleButtonClick.bind(this)
@@ -24,9 +22,11 @@ class Nav extends React.Component {
     }
     handleClickOutside(event){
         if (this.container.current && !this.container.current.contains(event.target)) {
-            this.setState({
-                open: false,
-            });
+            if (this.state.open === true){
+                this.setState({
+                    open: false,
+                });
+            }
         }
     };
 
@@ -38,36 +38,29 @@ class Nav extends React.Component {
             
             <section className="nav-container-logo">
                 <img src={window.logo} alt="logo" className="welcome--logo" />
-                <Link to="/"><h1>Andromedia</h1></Link>
+                <Link to="/" className ="welcomeTitle"><h1>Andromedia</h1></Link>
             </section>
 
             <section className="search">
-                <input type="text" />Searchbar goes here
-            </section>
+                <input type="text" />
+                <img src={window.search} alt="search" className="searchIcon" />
 
+            </section>
+            
             <section className="button_container" ref={this.container}>
-                {/* <h2 className="header-name">Hi, {this.currentUser.username}!</h2>
-                <img src="" alt="logo" className="welcome--logo" />
-                <button className="header-button" onClick={this.logout}>Log Out</button>
-                <ul>
-                    <li> <Link to="profile"> Profile</Link> </li>
-                    <li> <Link to="something"> Home</Link> </li>
-                    <li> <Link to="something"> Random Video?</Link> </li>
-                    <li> <a onClick={this.logout}> Logout </a> </li>
-                </ul> */}
-                {/* <div ref={this.wrapperRef}>{this.props.children}</div> */}
                 <button type="button" className="button" onClick={this.handleButtonClick}>
-                    <img src={window.pfp} alt="logo" className="pfp" />
+                    <img src={window.pfp} alt="pfp" className="pfp" />
                 </button>
                 {this.state.open && (
                     <div className="dropdown">
                         <ul>
                             
-                            <p className="topLi"> Hello, {this.currentUser.username}  </p>  
-                            <li><Link to={`/user/${this.currentUser.id}`}>Profile</Link></li>
-                            <li><Link to="/linked">LinkedIn</Link></li>
-                            <li><Link to="/gh">Github</Link></li>
-                            <li> <button onClick={this.props.logout}>Logout</button> </li>
+                            <p className="topLi"> Hello, {this.props.currentUser.username}  </p>  
+                            <li><Link to={`/user/${this.props.currentUser.id}`}>Profile</Link></li>
+                            <li><a href="https://www.linkedin.com/in/jonjo0721/">LinkedIn</a></li>
+                            <li><a href="https://github.com/jonathanbgjo">Github</a></li>
+                            <li> <a onClick={this.props.logout}>Sign out</a></li>
+                            {/* <li> <button onClick={this.props.logout}>Logout</button> </li> */}
                         </ul>
                     </div>
                 )}
@@ -79,13 +72,15 @@ class Nav extends React.Component {
         return(<nav className="top-nav">
             <section className="nav-container-logo">
                 <img src={window.logo} alt="logo" className="welcome--logo" />
-                <Link to="/">
+                <Link to="/" className="welcomeTitle">
                     <h1>Andromedia</h1>
                 </Link>
             </section>
 
             <section className="search">
-                <input type="text" /> Searchbar goes here
+                <input type="text" />
+                <img src={window.search} alt="search" className="searchIcon" />
+
             </section>
             <div className = "navSignIn">
                 <Link to="/login">Sign In</Link>
@@ -96,8 +91,10 @@ class Nav extends React.Component {
     };
         
     render(){
+        // debugger
+        console.log(this.props.currentUser)
         return(
-            this.currentUser ? this.dropdownLinks() : this.sessionLinks()
+            this.props.currentUser   ? this.dropdownLinks() : this.sessionLinks()
         )
     }    
 

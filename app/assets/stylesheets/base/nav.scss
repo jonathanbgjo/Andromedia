@@ -1,6 +1,9 @@
+html{
+    font-family: "Times New Roman", Times, serif;
+}
 .top-nav {
     display: flex;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid grey;
     position: fixed;
     width: 100%;
     justify-content: space-between;
@@ -79,7 +82,7 @@ body{
 .formLinks{
     display:flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 }
 .dropdown {
@@ -92,6 +95,9 @@ body{
     box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
     // border: 1px solid red;
     border-top: 0;
+}
+.dropdown > li{
+    text-decoration: none;
 }
 .button{
     position:absolute;
@@ -106,6 +112,7 @@ ul {
 }
 li {
   padding: 8px 12px;
+  text-decoration: none;
 }
 
 li:hover {
@@ -114,10 +121,19 @@ li:hover {
 }
 
 .pfp{
-    width: 20px;
-    height: 20px;
-    bottom:10px;
+    width: 25px;
+    height: 25px;
+    bottom:25px;
 }
 .topLi{
     border-bottom: 1px solid black;
+}
+.searchIcon{
+    width:20px;
+    height:20px;
+    border: 1px solid grey;
+    border-left: 0;
+}
+.welcomeTitle{
+    text-decoration: none;
 }
