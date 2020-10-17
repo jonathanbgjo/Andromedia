@@ -92,9 +92,9 @@ class Nav extends React.Component {
         
     render(){
         // debugger
-        console.log(this.props.currentUser)
+        // console.log(this.props.currentUser)
         return(
-            this.props.currentUser   ? this.dropdownLinks() : this.sessionLinks()
+            this.props.currentUser ? this.dropdownLinks() : this.sessionLinks()
         )
     }    
 
