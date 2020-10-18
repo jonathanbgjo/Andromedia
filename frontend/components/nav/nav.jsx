@@ -5,6 +5,7 @@ class Nav extends React.Component {
         super(props);
         this.state = {
             open: false,
+            dark: false,
         }
         this.sessionLinks = this.sessionLinks.bind(this)
         this.dropdownLinks = this.dropdownLinks.bind(this)
@@ -29,7 +30,10 @@ class Nav extends React.Component {
             }
         }
     };
-
+    switchTheme(){
+        const theme = this.state.dark;
+        this.setState({dark: !theme})
+    }
     handleButtonClick(){
         this.setState({open: !this.state.open})
     };
@@ -54,11 +58,16 @@ class Nav extends React.Component {
                 {this.state.open && (
                     <div className="dropdown">
                         <ul>
-                            
-                            <p className="topLi"> Hello, {this.props.currentUser.username}  </p>  
+                            <li className="topLi">
+                                <img src={window.pfp} alt="pfp" className="dropPfp" />
+                                <h3>{this.props.currentUser.username}</h3> 
+                                <p>{this.props.currentUser.email}</p> 
+                            </li>
                             <li><Link to={`/user/${this.props.currentUser.id}`}>Profile</Link></li>
+                            <li><Link to="/upload">Upload</Link></li>
                             <li><a href="https://www.linkedin.com/in/jonjo0721/">LinkedIn</a></li>
                             <li><a href="https://github.com/jonathanbgjo">Github</a></li>
+                            {/* <li> <p onClick={this.props.switchTheme} >Switch Theme</p></li> */}
                             <li> <a onClick={this.props.logout}>Sign out</a></li>
                             {/* <li> <button onClick={this.props.logout}>Logout</button> </li> */}
                         </ul>

@@ -1,5 +1,10 @@
 html{
-    font-family: "Times New Roman", Times, serif;
+    font-family: Helvetica , sans-serif;
+    font-weight: light
+}
+a{
+    text-decoration: none;
+    color:black
 }
 .top-nav {
     display: flex;
@@ -41,10 +46,21 @@ body{
     margin: 0% auto;
     // display:inline-flex;
     // margin: auto;
-    display:flex;
+    // display:flex;
     align-items: center;
     justify-content: center;
-    height: 150px;
+    height: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    // box-sizing: border-box;
+    // top:25px
+}
+input{
+//   width: 100%;
+//   padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: #E0FFFF
 }
 .hidden {
 	display: none;
@@ -66,7 +82,9 @@ body{
     align-items:center;
     // justify-content: space-between;
     margin: 0% auto;
-    width:100px;
+    width:75px;
+    height:75px;
+    // top:5px
 }
 .navSignIn{
     // text-decoration:  none;
@@ -83,7 +101,12 @@ body{
     display:flex;
     align-items: center;
     justify-content: space-evenly;
-
+    bottom: 10px;
+    
+}
+.formLinks > a {
+    text-decoration: none;
+    color: #1E90FF
 }
 .dropdown {
     position: fixed;
@@ -104,12 +127,12 @@ body{
     right: 50px;
     border-radius: 10px;
     top: -8px;
-
 }
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 li {
   padding: 8px 12px;
@@ -120,20 +143,68 @@ li:hover {
   background-color: rgba(0, 0, 0, 0.14);
   cursor: pointer;
 }
-
-.pfp{
+img{
     width: 30px;
     height: 25px;
 }
 .topLi{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height:35px;
+}
+.topLi > h3{
+    // display: flex;
+    margin-left:35px;
+    // padding-bottom:50px;
+    margin-top:-35px;
+    // bottom:500px;
+}
+.topLi > p{
+    margin-left:35px;
+    margin-top:-15px;
+
 }
 .searchIcon{
     width:20px;
     height:20px;
     border: 1px solid grey;
     border-left: 0;
+    margin-top:6px;
 }
 .welcomeTitle{
     text-decoration: none;
 }
+.formText {
+    margin:0% auto;
+    // right: 50px
+    text-align: center;
+    // font-weight: lighter;
+}
+.session-submit{
+display:block;
+background-color: #1E90FF;
+    border: none;
+    color: white;
+    // padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    // height: 50px;
+    // width:50px;
+    font-size: 16px;
+}
+.dropPfp{
+    position:relative;
+    margin-top:5px;
+}
+
+//search component
+// input[type=text] {
+//   background-color: white;
+//   background-image: url('searchicon.png');
+//   background-position: 10px 10px;
+//   background-repeat: no-repeat;
+//   padding-left: 40px;
+// }

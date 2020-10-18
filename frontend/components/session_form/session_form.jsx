@@ -53,25 +53,26 @@ class SessionForm extends React.Component {
                 {/* <img src="" alt="logo" className="login--logo" /> */}
                 <br></br>
                 <Link to="/"><img src={window.logo} alt="logo" className="login--logo" /></Link>
-                
-                    <br></br>
-                    
-                    
-                    <br />
+                <div className = "formText">
+                    {this.props.formType === "Login" ? <h3>Sign in</h3> : <h3>Sign up</h3>}
+                    <h4>to continue to Andromedia</h4>
+                </div>
+                    <br/>
+                    <br/>
         {/* Please {this.props.formType} or {this.props.navLink} */}
                     {this.renderErrors()}
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                         <br />
-                        <label>Username:
-            <input type="text"
+                        <label>
+                        <input placeholder="Enter Username" type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className="login-input"
                             />
                         </label>
                         <br />
-                        <label>Password:
-            <input type="password"
+                        <label>
+                        <input placeholder="Enter Password" type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="login-input"
@@ -79,13 +80,14 @@ class SessionForm extends React.Component {
                         </label>
                         <br />
                         <input className="session-submit" type="submit" value={this.props.formType} />
-                </form>    
                 <div className="formLinks">
-                    {this.props.formType === "Login" ? <Link to="/signup">
-                    Create Account
-                    </Link> : <Link to="/login">Login </Link>}
-                    {this.props.formType === 'Login' ? <button type="submit" onClick={this.handleDemo}>Demo User</button> : ""}
+                    {this.props.formType === "Login" ? 
+                    <Link to="/signup">Create Account</Link> : 
+                    <Link to="/login">Have an account? Log in </Link>}
+                    {this.props.formType === 'Login' ? 
+                    <button type="submit" onClick={this.handleDemo}>Demo User</button> : ""}
                 </div>            
+                </form>    
                 
                 
 
