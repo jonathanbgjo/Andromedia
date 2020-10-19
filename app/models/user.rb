@@ -7,13 +7,10 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-#   has_many :reviews,
-#     foreign_key: :author_id
-    
-#   has_many :favorites
-#   has_many :favorite_benches,
-#     through: :favorites,
-#     source: :bench
+  has_many :videos,
+    foreign_key: :uploader_id,
+    class_name: :Video,
+    dependent: :destroy
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

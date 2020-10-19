@@ -33,8 +33,7 @@ const App = () => {
             {/* <ProtectedRoute exact path="/benches/new" component={BenchFormContainer} />
             <Route path="/benches/:benchId" component={BenchShowContainer} /> */}
             {/* <Route exact path="/" component={SearchContainer} /> */}
-            <Route path="/" component={NavContainer} />
-
+            <Route exact path="/" component={NavContainer} />
             <Redirect from='*' to='/' />
             {/* <Redirect to="/"> </Redirect> */}
         </Switch>

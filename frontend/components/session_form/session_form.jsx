@@ -83,9 +83,9 @@ class SessionForm extends React.Component {
                 <div className="formLinks">
                     {this.props.formType === "Login" ? 
                     <Link to="/signup">Create Account</Link> : 
-                    <Link to="/login">Have an account? Log in </Link>}
+                    <Link to="/login">Sign in instead </Link>}
                     {this.props.formType === 'Login' ? 
-                    <button type="submit" onClick={this.handleDemo}>Demo User</button> : ""}
+                    <button type="submit" onClick={this.handleDemo} className="session-submit">Demo User</button> : ""}
                 </div>            
                 </form>    
                 

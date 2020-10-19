@@ -1,6 +1,6 @@
 html{
     font-family: Helvetica , sans-serif;
-    font-weight: light
+    font-weight: lighter;
 }
 a{
     text-decoration: none;
@@ -106,7 +106,15 @@ input{
 }
 .formLinks > a {
     text-decoration: none;
-    color: #1E90FF
+    color: #1E90FF;
+    border-radius: 5px;
+    // background-color: #1E90FF;
+    width: 150px;
+    font-weight: bolder;
+    // width:100px;
+    // height:40px
+    // height:40px;
+    // text-align:center;
 }
 .dropdown {
     position: fixed;
@@ -125,8 +133,9 @@ input{
 .button{
     position:absolute;
     right: 50px;
-    border-radius: 10px;
+    border-radius: 5px;
     top: -8px;
+    
 }
 ul {
   list-style: none;
@@ -194,6 +203,9 @@ background-color: #1E90FF;
     // height: 50px;
     // width:50px;
     font-size: 16px;
+    border-radius: 5px;
+    width:95px;
+    height:30px
 }
 .dropPfp{
     position:relative;
