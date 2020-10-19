@@ -11,8 +11,7 @@ class Nav extends React.Component {
         this.dropdownLinks = this.dropdownLinks.bind(this)
         this.handleButtonClick = this.handleButtonClick.bind(this)
         this.handleClickOutside = this.handleClickOutside.bind(this)
-        // console.log(React.version)
-        // console.log(this.logout)
+
         this.container = React.createRef();
     }
     componentDidMount() {
@@ -100,8 +99,7 @@ class Nav extends React.Component {
     };
         
     render(){
-        // debugger
-        // console.log(this.props.currentUser)
+
         return(
             this.props.currentUser ? this.dropdownLinks() : this.sessionLinks()
         )

@@ -6,6 +6,7 @@ class SessionForm extends React.Component {
         super(props);
         this.state = {
             username: '',
+            email: '',
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -54,8 +55,8 @@ class SessionForm extends React.Component {
                 <br></br>
                 <Link to="/"><img src={window.logo} alt="logo" className="login--logo" /></Link>
                 <div className = "formText">
-                    {this.props.formType === "Login" ? <h3>Sign in</h3> : <h3>Sign up</h3>}
-                    <h4>to continue to Andromedia</h4>
+                    {this.props.formType === "Login" ? <h>Sign in</h> : <h>Sign up</h>}
+                    <p>to continue to Andromedia</p>
                 </div>
                     <br/>
                     <br/>
@@ -70,6 +71,15 @@ class SessionForm extends React.Component {
                             />
                         </label>
                         <br />
+                    {this.props.formType === "Login" ? "" : <label>
+                        <input placeholder="Enter Email" type="text"
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                            className="login-input"
+                        />
+                    </label>}
+                        
+                    <br/>
                         <label>
                         <input placeholder="Enter Password" type="password"
                                 value={this.state.password}
@@ -89,7 +99,6 @@ class SessionForm extends React.Component {
                 </form>    
                 <div className="errors" >
                     {this.renderErrors()}
-
                 </div>
                 
 
