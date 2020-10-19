@@ -60,7 +60,6 @@ class SessionForm extends React.Component {
                     <br/>
                     <br/>
         {/* Please {this.props.formType} or {this.props.navLink} */}
-                    {this.renderErrors()}
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                         <br />
                         <label>
@@ -85,10 +84,13 @@ class SessionForm extends React.Component {
                     <Link to="/signup">Create Account</Link> : 
                     <Link to="/login">Sign in instead </Link>}
                     {this.props.formType === 'Login' ? 
-                    <button type="submit" onClick={this.handleDemo} className="session-submit">Demo User</button> : ""}
+                    <button type="submit" onClick={this.handleDemo} className="session-submit">Demo</button> : ""}
                 </div>            
                 </form>    
-                
+                <div className="errors" >
+                    {this.renderErrors()}
+
+                </div>
                 
 
             </div>

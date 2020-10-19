@@ -6,6 +6,14 @@ a{
     text-decoration: none;
     color:black
 }
+.formText >h4{
+    position:relative;
+    bottom:25px;
+}
+.formText >h3{
+    position:relative;
+    bottom:15px;
+}
 .top-nav {
     display: flex;
     border-bottom: 1px solid grey;
@@ -37,13 +45,15 @@ body{
     margin: 0% auto;
     border: 1px solid grey;
     width: 500px;
-    height: 500px;
+    height: 550px;
     margin-top: 200px;
 }
 .login-form-box{
     width:100%;
     // height:100%;
     margin: 0% auto;
+    position:relative;
+    bottom:55px;
     // display:inline-flex;
     // margin: auto;
     // display:flex;
@@ -52,6 +62,7 @@ body{
     height: 100px;
     box-sizing: border-box;
     text-align: center;
+    padding-bottom:200px;    
     // box-sizing: border-box;
     // top:25px
 }
@@ -60,7 +71,12 @@ input{
 //   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  background-color: #E0FFFF
+  background-color: #E0FFFF;
+  border-color: blue;
+  border-radius:5px;
+  width: 275px;
+  height:45px;
+  color:blue
 }
 .hidden {
 	display: none;
@@ -184,6 +200,18 @@ img{
 }
 .welcomeTitle{
     text-decoration: none;
+    font-size: 20px;
+    height: 25px;
+    // top:50%;
+    // position: relative;
+    position: absolute;
+//   top:;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left:100px;
+
+    // top: 150px;
+    // text-align: center;
 }
 .formText {
     margin:0% auto;
@@ -211,7 +239,17 @@ background-color: #1E90FF;
     position:relative;
     margin-top:5px;
 }
-
+.errors{
+    height:200px;
+    width:300px;
+    // bottom:150px;
+    // top:5px;
+    bottom:15px;
+    left:100px;
+    text-align:center;
+    position:relative;
+    color: red;
+}
 //search component
 // input[type=text] {
 //   background-color: white;
