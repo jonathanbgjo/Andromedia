@@ -175,4 +175,15 @@ video14.video_file.attach(io:vid14, filename:'summit.mp4')
 video14.thumbnail.attach(io:thumb14, filename:'summit.jpg')
 
 
+video15 = Video.create!({
+    uploader_id: celine.id,
+    title: "Monster Jerry",
+    description: "Monster Jerry vs tom",
+    views: rand(1000)
+})
+thumb15 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/tomnjerry.jpg')
+vid15 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/tomnjerry.mp4')
+video15.video_file.attach(io:vid15, filename:'tomnjerry.mp4')
+video15.thumbnail.attach(io:thumb15, filename:'tomnjerry.jpg')
+
 
