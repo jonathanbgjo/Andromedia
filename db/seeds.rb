@@ -24,7 +24,7 @@ video1 = Video.create!({
     uploader_id: cedric.id,
     title: "Isn't she lovely",
     description: "Clara c + Jayesslee",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb1 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/clarac.jpg')
 vid1 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/clarac.mp4')
@@ -35,7 +35,7 @@ video2 = Video.create!({
     uploader_id: henry.id,
     title: "Brad Leone makes butter",
     description: "Bon Appetit Brad Leona makes butter on it's alive!",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb2 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/bonappetit.jpg')
 vid2 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/bonappetit.mp4')
@@ -46,7 +46,7 @@ video3 = Video.create!({
     uploader_id: celine.id,
     title: "How to start a movie",
     description: "Film essay on how to start a movie by Closer Look",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb3 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/closerlook.jpg')
 vid3 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/closerlook.mp4')
@@ -57,7 +57,7 @@ video4 = Video.create!({
     uploader_id: rayden.id,
     title: "Benedict Cumberpatch's impressions",
     description: "Benedict Cumberpatch impersonating actor/actresses he's worked with",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb4 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/cumberpatch.jpg')
 vid4 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/cumberpatch.mp4')
@@ -68,7 +68,7 @@ video5 = Video.create!({
     uploader_id: paul.id,
     title: "You won't believe this!",
     description: "David Dobrik's vlog",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb5 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/david.jpg')
 vid5 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/david.mp4')
@@ -79,7 +79,7 @@ video6 = Video.create!({
     uploader_id: cedric.id,
     title: "Dup Lipa singing new rules",
     description: "Dua Lipa live singing",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb6 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/dua.jpg')
 vid6 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/dua.mp4')
@@ -90,7 +90,7 @@ video7 = Video.create!({
     uploader_id: cedric.id,
     title: "How to pronounce Gif",
     description: "title says it all",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb7 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/gif.jpg')
 vid7 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/gif.mp4')
@@ -101,7 +101,7 @@ video8 = Video.create!({
     uploader_id: celine.id,
     title: "JJ Watt mic'd up",
     description: "JJ Watt mic'd up and dominating",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb8 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/jj.jpg')
 vid8 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/jj.mp4')
@@ -112,7 +112,7 @@ video9 = Video.create!({
     uploader_id: henry.id,
     title: "Lebron James best 3 final games",
     description: "GOAT",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb9 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/legoat.jpg')
 vid9 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/legoat.mp4')
@@ -123,7 +123,7 @@ video10 = Video.create!({
     uploader_id: rayden.id,
     title: "Random weasel video",
     description: "Did you need to know more",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb10 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/weasel.jpg')
 vid10 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/weasel.mp4')
@@ -134,7 +134,7 @@ video11 = Video.create!({
     uploader_id: cedric.id,
     title: "Lord of the rings clip",
     description: "all rights belong to ---",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb11 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/lotr.jpg')
 vid11 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/lotr.mp4')
@@ -145,7 +145,7 @@ video12 = Video.create!({
     uploader_id: paul.id,
     title: "Machine gun kelly - lonely",
     description: "see more on www .mgk.com",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb12 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/mgk.jpg')
 vid12 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/mgk.mp4')
@@ -156,7 +156,7 @@ video13 = Video.create!({
     uploader_id: celine.id,
     title: "Unbelieveable singing!",
     description: "Thought it was the radio",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb13 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/radio.jpg')
 vid13 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/radio.mp4')
@@ -167,7 +167,7 @@ video14 = Video.create!({
     uploader_id: cedric.id,
     title: "Summit steals athena chests on Sea of Thieves",
     description: "check summit @ twitch.tv",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb14 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/summit.jpg')
 vid14 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/summit.mp4')
@@ -179,7 +179,7 @@ video15 = Video.create!({
     uploader_id: celine.id,
     title: "Monster Jerry",
     description: "Monster Jerry vs tom",
-    views: rand(1000)
+    views: rand(10000)
 })
 thumb15 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/tomnjerry.jpg')
 vid15 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/tomnjerry.mp4')

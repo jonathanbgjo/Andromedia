@@ -90,7 +90,7 @@ li:hover {
     column-count: 4;
 }
 .videoIndexItem{
-    // width:25%;
+    width:19%;
     height:20%;
     margin: 1px;
     font-size:14px;
@@ -352,6 +352,9 @@ li:hover {
 }
 .dropdown {
     position: fixed;
+    background: white;
+    overflow:hidden;
+    margin-top:-8px;
     top: 68px;
     right: 35px;
     width: 300px;
