@@ -112,20 +112,23 @@ li:hover {
 .videoTitle{
     width: 100%;
     flex-wrap: wrap;
-    // height:50px;;
+    height:1px;;
     // max-height: 50px;
     // margin:0% auto;
-    height:50px;
+    height:10px;
     font-size:20px;
     font-weight:bold;
-    margin-bottom:-10px;
+    // overflow:hidden;
+    // margin-bottom:-10px;
+    padding-bottom:5px;
 
 }
 .videoUploader{
     text-transform: capitalize;
     // height:10px;
     // vertical-align:top
-    // margin-top: -10px;
+    // margin-top: -20px;
+    margin-bottom: -3px;
     float:left;
 }
 .indexPfp{

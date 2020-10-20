@@ -4,6 +4,12 @@ import {Link} from 'react-router-dom'
 const VideoIndexItem = ({video}) =>{
     console.log(video)
     let dateString = dateUploaded(video.created_at)
+    let temp = ""
+    if(video.title.length > 40){
+        temp = video.title.substr(0,37).concat("...")
+    }else{
+        temp = video.title
+    }
     return(
         <div className="videoIndexItem">
             <Link to={`/videos/${video.id}`}>
@@ -12,7 +18,7 @@ const VideoIndexItem = ({video}) =>{
             <div className="videoDetails">
                 <Link to={`/user/${video.uploader.id}`} className="indexPfp"> <img src={window.pfp} alt="pfp" className="pfp" /> </Link>
                 <div className="videoIndexItemText">
-                    <h4 className="videoTitle"><Link to={`/videos/${video.id}`}>{video.title}</Link></h4>
+                    <h4 className="videoTitle"><Link to={`/videos/${video.id}`}>{temp}</Link></h4>
 
                     <p className="videoUploader"><Link to={`/user/${video.uploader.id}`}> {video.uploader.username}</Link></p>
                     <div className="videoStats">
