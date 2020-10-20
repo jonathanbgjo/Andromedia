@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import VideoIndex from './video_index.jsx'
-// import { logout } from '../../actions/session_actions';
-
-const mapStateToProps = ({ session, entities: { videos }}) => {
+import {fetchVideos} from '../../actions/video_actions'
+const mapStateToProps = ({ entities: { videos }}) => {
     return {
+        videos: videos
         // currentUser: users[session.id]
     };
 };
 
 const mapDispatchToProps = dispatch => ({
-    
+    fetchVideos: () => dispatch(fetchVideos())
     // logout: () => dispatch(logout())
 });
 
