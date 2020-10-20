@@ -34,9 +34,19 @@ class SessionForm extends React.Component {
         }
         this.props.processForm(user);
     }
-    renderErrors() {
+    renderSignUpErrors(field) {
         return (
-            <ul>
+            <div>
+                {this.props.errors.map((error, i) =>{
+                    return error.toLowerCase().includes(field) ? error : null
+                }      
+                )}
+            </div>
+        );
+    }
+    renderLoginError() {
+        return (
+            <ul>    
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -49,57 +59,47 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div className="login-form-container">
-
-                {/*onclick for logo*/}
-                {/* <img src="" alt="logo" className="login--logo" /> */}
-                <br></br>
-                <Link to="/"><img src={window.logo} alt="logo" className="login--logo" /></Link>
+                <Link to="/" className = "sessionHomeLink"><img src={window.logo} alt="logo" className="login--logo" /></Link>
                 <div className = "formText">
-                    {this.props.formType === "Login" ? <h>Sign in</h> : <h>Sign up</h>}
+                    {this.props.formType === "Login" ? <p>Sign in</p> : <p>Sign up</p>}
                     <p>to continue to Andromedia</p>
                 </div>
-                    <br/>
-                    <br/>
-        {/* Please {this.props.formType} or {this.props.navLink} */}
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                        <br />
                         <label>
                         <input placeholder="Enter Username" type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className="login-input"
-                            />
+                                />
                         </label>
-                        <br />
+                    {this.props.formType === "Login" ? "" : <div className="errors"> {this.renderSignUpErrors('username')}</div> } 
                     {this.props.formType === "Login" ? "" : <label>
                         <input placeholder="Enter Email" type="text"
                             value={this.state.email}
                             onChange={this.update('email')}
                             className="login-input"
-                        />
+                            />
                     </label>}
-                        
-                    <br/>
+                    {this.props.formType === "Login" ? <div className='loginErrors'>{this.renderLoginError()}</div> : <div className='errors'>{this.renderSignUpErrors('email')}</div>}
+                            
                         <label>
                         <input placeholder="Enter Password" type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="login-input"
-                            />
+                                />
                         </label>
-                        <br />
+                    {this.props.formType === "Login" ? '' : <div className='errors'>{this.renderSignUpErrors('password')}</div>}
+
                         <input className="session-submit" type="submit" value={this.props.formType} />
                 <div className="formLinks">
                     {this.props.formType === "Login" ? 
                     <Link to="/signup">Create Account</Link> : 
                     <Link to="/login">Sign in instead </Link>}
                     {this.props.formType === 'Login' ? 
-                    <button type="submit" onClick={this.handleDemo} className="session-submit">Demo</button> : ""}
+                    <button type="submit" onClick={this.handleDemo} className="demo">Demo</button> : ""}
                 </div>            
                 </form>    
-                <div className="errors" >
-                    {this.renderErrors()}
-                </div>
                 
 
             </div>

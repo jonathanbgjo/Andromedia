@@ -1,4 +1,0 @@
-class VideosController < ApplicationController
-    
-
-end
