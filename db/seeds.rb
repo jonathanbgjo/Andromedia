@@ -125,8 +125,8 @@ video10 = Video.create!({
     description: "Did you need to know more",
     views: rand(1000)
 })
-thumb10 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/weasel.mp4')
-vid10 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/weasel.jpg')
+thumb10 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/thumbnails/weasel.jpg')
+vid10 = open('https://andromedia-dev.s3-us-west-2.amazonaws.com/videos/weasel.mp4')
 video10.video_file.attach(io:vid10, filename:'weasel.mp4')
 video10.thumbnail.attach(io:thumb10, filename:'weasel.jpg')
 

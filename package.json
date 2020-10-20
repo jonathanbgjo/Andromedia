@@ -30,6 +30,7 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "react": "^16.4.0",
+    "react-datetime": "^3.0.4",
     "react-dom": "^16.4.0",
     "react-dropdown": "^1.9.0",
     "react-redux": "^5.1.2",
