@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './nav.module.css'
 class Nav extends React.Component { 
     constructor(props){
         super(props);
@@ -42,7 +41,7 @@ class Nav extends React.Component {
             
             <section className="nav-container-logo">
                 <img src={window.logo} alt="logo" className="welcome--logo" />
-                <Link to="/" className ="welcomeTitle"><h1>Andromedia</h1></Link>
+                <Link to="/" className="welcomeTitle"><h1>Andromedia</h1></Link>
             </section>
 
             <section className="search">

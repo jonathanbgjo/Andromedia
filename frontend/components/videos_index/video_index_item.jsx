@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 // import Datetime from 'react-datetime';
 const VideoIndexItem = ({video}) =>{
-    console.log(video)
+    // console.log(video)
     let dateString = dateUploaded(video.created_at)
     let temp = ""
     if(video.title.length > 40){
@@ -34,7 +34,7 @@ const VideoIndexItem = ({video}) =>{
         </div>
     )
 }
-const dateUploaded = (date) => {
+export const dateUploaded = (date) => {
     let now = new Date()
     let then = new Date(date)
     let hours = then.getHours() - now.getHours() * 60
@@ -51,6 +51,5 @@ const dateUploaded = (date) => {
     else if (seconds < 604800) { return Math.round(seconds / 86400) + " days ago"; }
     else if (seconds <= 777600) { return "1 week ago"; }
     else { return "really long time ago"}
-
 }
 export default VideoIndexItem

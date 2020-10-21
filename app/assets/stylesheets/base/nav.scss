@@ -160,8 +160,6 @@ li:hover {
     // vertical-align:top;
     white-space: normal;
     margin-top: 0;
-
-
     // justify-content: space-evenly;
 }
 .videoStats{
@@ -190,24 +188,59 @@ li:hover {
 
 
 
-
-
-
-.welcomeTitle{
-    text-decoration: none;
-    font-size: 20px;
-    height: 25px;
-    // top:50%;
-    // position: relative;
-    // position: absolute;
-//   top:;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left:100px;
-
-    // top: 150px;
-    // text-align: center;
+////////////Video show
+.videoContainer{
+    // text-align: start;
+    // position:static;
+    // margin-top:100px;
+    padding-top:75px;
+    padding-left:100px;
+    width: 80.5%;
+    
 }
+.showTitle{
+    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: 525;
+    height:1px;
+}
+.showDetails{
+    display:flex;
+    // margin-toppx;
+    // padding-bottom:15px;
+    border-bottom: 1px solid grey;
+    font-size:16px; 
+    justify-content: space-between;
+    
+}
+.showUnderVideo{
+    margin-top:20px;
+    display:flex;
+    vertical-align: top;
+    border-bottom: 1px solid grey;
+}
+.showPfp{
+    height:48px;
+    width:48px;
+}
+.userDescription{
+    margin-left:15px;
+    height:160px;
+}
+.showUser{
+    // vertical-align: top;
+    margin-top:2px;
+    text-transform: capitalize;
+    font-weight:549;
+    font-size:15px;
+    padding-bottom:40px;    
+}
+.video-react-poster{
+    // width:800px;
+}
+
+
+
 
 
 .dropPfp{
@@ -337,16 +370,33 @@ li:hover {
     justify-content: space-between;
     background: white;
     align-items:center;
+    vertical-align: center;
     margin: 0;
     padding: 0;
     overflow:hidden;
-    margin-top:-10px;
+    // margin-top:-5px;
     margin-left:-10px;
+    height:50px;
 
 }
+.welcomeTitle{
+    text-decoration: none;
+    font-size: 15px;
+    height: 25px;
+    -ms-transform: translateY(-85%);
+    transform: translateY(-85%);
+    padding-left:5px;
+    // font-family: 'tradegothicltcom-bdcn20', sans-serif;
+    font-family: 'TradeGothicLTStd-BdCn20';
+    font-weight:lighter;
+    margin-top:3px;
+    // left:100px;
+}
 .welcome--logo{
-    width: 60px;
-    height: 40px;
+    width: 25px;
+    height: 17px;
+    margin-left:30px;
+    // margin-top:5px;
 }
 .button_container{
     position:relative;
