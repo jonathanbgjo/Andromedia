@@ -15,20 +15,24 @@ const VideoIndexItem = ({video}) =>{
             <Link to={`/videos/${video.id}`}>
                 <img src={video.thumbnailUrl} className = "thumbnail"/>
             </Link>
-            <div className="videoDetails">
-                <Link to={`/user/${video.uploader.id}`} className="indexPfp"> <img src={window.pfp} alt="pfp" className="pfp" /> </Link>
-                <div className="videoIndexItemText">
-                    <h4 className="videoTitle"><Link to={`/videos/${video.id}`}>{temp}</Link></h4>
+            <div className="indexVideoDetails">
+                <Link to={`/user/${video.uploader.id}`} className="indexPfp"> 
+                    <img src={window.pfp} alt="pfp" className="pfp" /> 
+                </Link>
+                <div className="videoDetails">
+                    <div className="videoIndexItemText">
+                        <h4 className="videoTitle"><Link to={`/videos/${video.id}`}>{temp}</Link></h4>
+                        <Link to={`/user/${video.uploader.id}`} className="videoUploader"> {video.uploader.username}</Link>
+                        <div className="videoStats">
+                            <p className="videoViews">Views: {video.views}  </p>
+                            <p>▫ </p>
+                            <p className="uploadDate"> {dateString}</p>
+                        </div>
 
-                    <p className="videoUploader"><Link to={`/user/${video.uploader.id}`}> {video.uploader.username}</Link></p>
-                    <div className="videoStats">
-                        <p className="videoViews">Views: {video.views}  </p>
-                        <p>▫ </p>
-                        <p className="uploadDate"> {dateString}</p>
                     </div>
-                    
                 </div>
             </div>
+            
             
             
         </div>

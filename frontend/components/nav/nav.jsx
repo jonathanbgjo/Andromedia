@@ -77,7 +77,9 @@ class Nav extends React.Component {
         </nav>)
     };
     sessionLinks(){
-        return(<nav className="top-nav">
+        return(
+        <nav className="top-nav">
+            
             <section className="nav-container-logo">
                 <img src={window.logo} alt="logo" className="welcome--logo" />
                 <Link to="/" className="welcomeTitle">
@@ -91,17 +93,21 @@ class Nav extends React.Component {
 
             </section>
             <div className = "navSignIn">
-                <Link to="/login">Sign In</Link>
+                    <img src={window.pfp} alt="pfp" className="dropPfp" />
+                    <Link to="/login">SIGN IN</Link>
                 {/* &nbsp;or&nbsp;
                 <Link to="/signup">Sign up!</Link> */}
             </div>
         </nav>)
     };
-        
+    
     render(){
-
         return(
-            this.props.currentUser ? this.dropdownLinks() : this.sessionLinks()
+            <div>
+                {this.props.currentUser ? this.dropdownLinks() : this.sessionLinks()}
+            </div>
+            
+            
         )
     }    
 

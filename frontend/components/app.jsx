@@ -8,14 +8,16 @@ import ProfileContainer from './profile/profile_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
 import VideoIndexContainer from './videos_index/video_index_container';
 import VideoShowContainer from './video_show/video_show_container'
+import SideContainer from './nav/side_container'
 const App = () => {
     return (
     <div>
             {/* <Route path="/user/:userId" component={NavContainer} /> */}
-            <NavContainer />
+            <NavContainer/>
+            <Route exact path ="/" component={SideContainer} />
         <Switch>
             <Route path="/videos/:videoId" component={VideoShowContainer} />
-            <Route path="/user/:userId" component={ProfileContainer} />
+            {/* <Route path="/user/:userId" component={ProfileContainer} /> */}
             <Route exact path="/" component={VideoIndexContainer} />
         </Switch>
     </div>
