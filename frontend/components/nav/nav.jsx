@@ -63,7 +63,7 @@ class Nav extends React.Component {
                                 <p>{this.props.currentUser.email}</p> 
                             </li>
                             <li><Link to={`/user/${this.props.currentUser.id}`}>Profile</Link></li>
-                            <li><Link to="/upload">Upload</Link></li>
+                            <li><Link to="/videos/new">Upload</Link></li>
                             <li><a href="https://www.linkedin.com/in/jonjo0721/">LinkedIn</a></li>
                             <li><a href="https://github.com/jonathanbgjo">Github</a></li>
                             {/* <li> <p onClick={this.props.switchTheme} >Switch Theme</p></li> */}

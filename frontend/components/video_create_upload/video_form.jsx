@@ -110,9 +110,9 @@ class VideoForm extends React.Component {
         if (!this.props.video) { return null }
         return(
             <div className="videoFormContainer">
-                
                 <form onSubmit={this.handleSubmit} className ="videoForm">
-                <h1>{this.state.title}</h1>
+                <h1>{this.props.formType}</h1>
+                <h3>{this.state.title}</h3>
                     <label htmlFor="">
                         <input type="text" 
                         placeholder="Title(required)" 

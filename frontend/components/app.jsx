@@ -23,6 +23,7 @@ const App = () => {
             <Route path="/videos/:videoId" component={VideoShowContainer} />
             {/* <Route path="/user/:userId" component={ProfileContainer} /> */}
             <Route exact path="/" component={VideoIndexContainer} />
+            <Redirect to="/" path="*"/>
         </Switch>
     </div>
     )
