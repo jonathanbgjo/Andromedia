@@ -15,7 +15,9 @@ export const createVideo = (videoForm) => (
     $.ajax({
         method: 'POST',
         url: '/api/videos',
-        data: videoForm
+        data: videoForm,
+        contentType: false,
+        processData: false
     })
 );
 
@@ -23,7 +25,9 @@ export const updateVideo = (videoForm, videoId) => (
     $.ajax({
         method: 'PATCH',
         url: `/api/videos/${videoId}`,
-        data: videoForm
+        data: videoForm,
+        contentType: false,
+        processData: false
     })
 );
 

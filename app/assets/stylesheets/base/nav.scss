@@ -1,6 +1,8 @@
 html{
     font-family: Helvetica , sans-serif;
     font-weight: lighter;
+    background-color:ghostwhite;
+
 }
 a{
     text-decoration: none;
@@ -39,7 +41,7 @@ input{
 }
 .navSignIn{
     // text-decoration:  none;
-    border: 1px solid blue;
+    border: 1px solid #1E90FF;
     margin-right: 25px;
     color: lightblue;
     font-size: 14px;
@@ -79,6 +81,84 @@ li:hover {
   background-color: rgba(0, 0, 0, 0.14);
   cursor: pointer;
 }
+//////video form
+.videoFormContainer{
+    // margin-top:100px;
+    padding-top:150px;
+    // vertical-align: center;;
+    background-color:ghostwhite;
+    display:flex;
+    flex-direction: row;
+    height:100%;
+    width:100%;
+}
+.videoForm{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:650px;
+    padding-left:20%;
+    height:100%;
+}
+.formTitle{
+    width:500px;
+    height:75px;
+}
+.formDescription{
+    width:500px;
+    height:150px;
+}
+.formThumb{
+    display:flex;
+    flex-direction: column;
+    height:250px;
+    justify-content: space-between;
+    width:100%;
+}
+.formThumb > input{
+    background-color: ghostwhite;
+}
+.formVideo{
+    height:300px;
+    width:100%;
+    display:flex;
+    // display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.formVideo > input {
+    background-color:ghostwhite;
+}
+.formThumb > p{
+    border:1px solid white;
+    height:200px;
+    width:200px;
+}
+.submitForm{
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+}
+.videoPreview{
+    display:flex;
+}
+.deleteButton{
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #E0FFFF;
+    border-color: #1E90FF;
+    border-radius: 5px;
+    width: 275px;
+    height: 45px;
+    color: #1E90FF;
+    font-size: 17px;
+    // text-align: center;
+    vertical-align: center;
+    border:1px solid blue
+
+}
+
+
 
 ///////////////////Video index
 .videoIndexContainer{
@@ -164,7 +244,11 @@ li:hover {
     padding-top:75px;
     padding-left:100px;
     width: 80.5%;
-    
+    background: ghostwhite;
+}
+
+.videoPlayer{
+    // width:100%;
 }
 .showTitle{
     font-size: 20px;
@@ -177,13 +261,17 @@ li:hover {
     border-bottom: 1px solid grey;
     font-size:16px; 
     justify-content: space-between;
-    
+    width:94%;
+    height:100px;
 }
 .showUnderVideo{
     margin-top:20px;
     display:flex;
     vertical-align: top;
     border-bottom: 1px solid grey;
+    width:94%;
+    flex-direction: row;
+    // justify-content: space-between;
 }
 .showPfp{
     height:48px;
@@ -200,7 +288,67 @@ li:hover {
     font-size:15px;
     padding-bottom:40px;    
 }
-.video-react-poster{
+textarea{
+     width:83.9%
+}
+.editButton{
+    border:1px solid #065fd4;
+    padding-top:9px;
+    padding-bottom:9px;
+    padding-left:15px;
+    padding-right:15px;
+    width:50px;
+    height:20px;
+    background-color: #065fd4;
+    color:white;
+    font-size:16px;
+    right:10px;
+    border-radius:3px;
+    // text-align: right;
+    margin-left:162px;
+}
+// .video-react .video-react-video{
+//     position:relative;
+// }
+.showPage{
+    display:flex;
+    flex-direction:row;
+    background-color: ghostwhite;
+}
+.sideVideos{
+    right:100px;
+    padding-top:75px;
+    width:19.5%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    margin-right:75px;
+}
+.videoShowItem{
+    height:94px;
+    width:402px;
+    display:flex;
+    flex-direction: row;
+    // text-align   ;
+    // vertical-align: center;
+    padding-bottom:7px;
+}
+.showItemThumbnail{
+    width:168px;
+    height:94px;
+}
+.videoShowItemText{
+    display:flex;
+    flex-direction:column;
+    height:94px;
+    font-size:12px;
+    padding-left:5px;
+    width:202px;
+}
+.videoShowItemStats{
+    display:flex;
+    flex-direction:row;
+    // justify-content: space-evenly;
 }
 
 
@@ -419,16 +567,19 @@ li:hover {
     border-left: 0;
     margin-top:6px;
 }
-.sideBar{
+.sideBarContainer{
     position:fixed;
+
+    width:12.5%;
+    height:100%;
+}
+.sideBar{
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin:0%auto;
-    width:12.5%;
+    width:100%;
     height:100%;
     padding-top:35px;
-    // padding-right:70px;
     border-right: 1px solid ghostwhite;
     background-color:white;
     margin-top:44px;
@@ -439,5 +590,4 @@ li:hover {
     width:20px;
     height:20px;
     text-align: center;
-    // padding-left:10px;
 }

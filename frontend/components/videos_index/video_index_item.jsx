@@ -41,8 +41,8 @@ const VideoIndexItem = ({video}) =>{
 export const dateUploaded = (date) => {
     let now = new Date()
     let then = new Date(date)
-    let hours = then.getHours() - now.getHours() * 60
-    let seconds = Math.abs(((then.getMinutes() - now.getMinutes()) + hours )* 60)
+    let hoursInMin = (then.getHours() - now.getHours()) * 60
+    let seconds = Math.abs(((then.getMinutes() - now.getMinutes()) + hoursInMin )* 60) + (then.getSeconds()-now.getSeconds())
     if (seconds <= 1) { return "just now"; }
     else if (seconds < 20) { return seconds + " seconds ago"; }
     else if (seconds < 40) { return "half a minute ago"; }
