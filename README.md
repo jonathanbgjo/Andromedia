@@ -5,7 +5,7 @@ Andromedia is a YouTube Clone where all your dreams can come true through media.
 
 * Technologies
 
-   Ruby on Rails 
+  * Ruby on Rails 
    
    React
    
