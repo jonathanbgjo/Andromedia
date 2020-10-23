@@ -23,18 +23,20 @@ class VideoForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchVideo(this.props.match.params.videoId)
-            .then( () =>{
-                this.setState({
-                    title: this.props.video.title,
-                    description: this.props.video.description,
-                    uploader_id: this.props.video.uploader_id,
-                    thumbnailFile: this.props.video.thumbnail,
-                    thumbnailUrl: this.props.video.thumbnailUrl,
-                    videoFile: this.props.video.video_file,
-                    videoUrl: this.props.video.videoUrl,
+        if(this.props.formType === "Update Video"){
+            this.props.fetchVideo(this.props.match.params.videoId)
+                .then( () =>{
+                    this.setState({
+                        title: this.props.video.title,
+                        description: this.props.video.description,
+                        uploader_id: this.props.video.uploader_id,
+                        thumbnailFile: this.props.video.thumbnail,
+                        thumbnailUrl: this.props.video.thumbnailUrl,
+                        videoFile: this.props.video.video_file,
+                        videoUrl: this.props.video.videoUrl,
+                    })
                 })
-            })
+        }
     }
     update(property) {
         return e => this.setState({
