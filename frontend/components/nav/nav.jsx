@@ -69,7 +69,6 @@ class Nav extends React.Component {
                             <li><a href="https://github.com/jonathanbgjo">Github</a></li>
                             {/* <li> <p onClick={this.props.switchTheme} >Switch Theme</p></li> */}
                             <li> <a onClick={this.props.logout}>Sign out</a></li>
-                            {/* <li> <button onClick={this.props.logout}>Logout</button> </li> */}
                         </ul>
                     </div>
                 )}

@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-// import Datetime from 'react-datetime';
 const VideoIndexItem = ({video}) =>{
     let dateString = dateUploaded(video.created_at)
     let temp = ""

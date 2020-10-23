@@ -14,10 +14,7 @@ const videosReducer = (state = {}, action) => {
         case REMOVE_VIDEO:
             delete newState[action.videoId]
             return newState
-        // case RECEIVE_REVIEW:
-        //     return Object.assign({}, state, { [action.author.id]: action.author });
-        // case RECEIVE_BENCH:
-        //     return Object.assign({}, state, action.authors);
+
         default:
             return state;
     }

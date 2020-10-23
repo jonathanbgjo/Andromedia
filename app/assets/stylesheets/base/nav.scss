@@ -40,7 +40,6 @@ input{
     width:10px;
 }
 .navSignIn{
-    // text-decoration:  none;
     border: 1px solid #1E90FF;
     margin-right: 25px;
     color: lightblue;
@@ -81,11 +80,9 @@ li:hover {
   background-color: rgba(0, 0, 0, 0.14);
   cursor: pointer;
 }
-//////video form
+////video form
 .videoFormContainer{
-    // margin-top:100px;
     padding-top:150px;
-    // vertical-align: center;;
     background-color:ghostwhite;
     display:flex;
     flex-direction: column;
@@ -119,7 +116,6 @@ li:hover {
     background-color: ghostwhite;
 }
 .formVideo{
-    // height:300px;
     width:100%;
     display:flex;
     flex-direction: column;
@@ -141,21 +137,6 @@ li:hover {
 .videoPreview{
     display:flex;
 }
-// .deleteButton{
-//     margin: 8px 0;
-//     box-sizing: border-box;
-//     background-color: #E0FFFF;
-//     border-color: #1E90FF;
-//     border-radius: 5px;
-//     width: 275px;
-//     height: 45px;
-//     color: #1E90FF;
-//     font-size: 17px;
-//     // text-align: center;
-//     vertical-align: center;
-//     border:1px solid blue
-
-// }
 
 
 
@@ -179,7 +160,6 @@ li:hover {
     height:350px;
     margin: 1px;
     font-size:14px;
-    // padding-bottom:30px;
     padding-left:15px;
     background-color:ghostwhite;
 }
@@ -207,7 +187,6 @@ li:hover {
     display:flex;
     border-radius:50px;
     background-color: ghostwhite;
-    // pointer-events: none;
     margin-top:30px;
 }
 .indexPfp > img {
@@ -246,9 +225,7 @@ li:hover {
     background: ghostwhite;
 }
 
-.videoPlayer{
-    // width:100%;
-}
+
 .showTitle{
     font-size: 20px;
     font-family: "Roboto";
@@ -270,7 +247,6 @@ li:hover {
     border-bottom: 1px solid grey;
     width:94%;
     flex-direction: row;
-    // justify-content: space-between;
 }
 .showPfp{
     height:48px;
@@ -303,12 +279,8 @@ textarea{
     font-size:16px;
     right:10px;
     border-radius:3px;
-    // text-align: right;
     margin-left:162px;
 }
-// .video-react .video-react-video{
-//     position:relative;
-// }
 .showPage{
     display:flex;
     flex-direction:row;
@@ -328,8 +300,6 @@ textarea{
     width:402px;
     display:flex;
     flex-direction: row;
-    // text-align   ;
-    // vertical-align: center;
     padding-bottom:7px;
 }
 .showItemThumbnail{
@@ -347,7 +317,6 @@ textarea{
 .videoShowItemStats{
     display:flex;
     flex-direction:row;
-    // justify-content: space-evenly;
 }
 .deleteSubmit{
     padding-left:40%;
@@ -367,9 +336,7 @@ textarea{
 .commentAuthor{
     font-weight:bold;
 }
-.commentContainer{
-    // display:flex;
-}
+
 .commentForm{
     width:94%;
     display:flex;
@@ -533,7 +500,6 @@ textarea{
     height: 17px;
     margin-left:30px;
     margin-top:5px
-    // margin-top:5px;
 }
 .button_container{
     position:relative;

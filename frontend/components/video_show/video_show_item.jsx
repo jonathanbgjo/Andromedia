@@ -19,7 +19,7 @@ const VideoShowItem = ({ video }) => {
                     <Link to={`/user/${video.uploader.id}`} className="videoUploader"> {video.uploader.username}</Link>
                     <div className="videoShowItemStats">
                         <p className="videoShowItemViews">Views: {video.views}  </p>
-                        <p>▫ </p>
+                        <p>▫</p>
                         <p className="showItemUploadDate"> {dateString}</p>
                     </div>
                 </div>

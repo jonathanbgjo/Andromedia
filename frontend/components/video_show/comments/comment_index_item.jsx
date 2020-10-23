@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import Datetime from 'react-datetime';
-
 class CommentIndexItem extends React.Component{
     constructor(props){
         super(props)

@@ -10,9 +10,6 @@ class Profile extends React.Component {
     componentDidMount(){
     }
     render(){
-        //currentUser.videos??
-        //iterate through videos array and set each video as a video component
-        
         return(
             <div> Am i in {this.props.currentUser.username}'s' profile!</div>
         )

@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import React from 'react';
 import VideoForm from './video_form.jsx'
 import {fetchVideo, updateVideo, deleteVideo } from '../../actions/video_actions'
-// import { fetchVideo } from '../../util/video_api_util.js';
 const mapStateToProps = (state, ownProps) => {
     let video;
     if(state.entities.videos[ownProps.match.params.videoId]){

@@ -35,9 +35,6 @@ class VideoForm extends React.Component {
                     videoUrl: this.props.video.videoUrl,
                 })
             })
-        
-        // this.props.fetchVideo(this.props.match.params.videoId)
-        
     }
     update(property) {
         return e => this.setState({
