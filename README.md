@@ -13,10 +13,11 @@ Andromedia is a YouTube Clone where all your dreams can come true through media.
 
 * MVP
 
-  * User Creation and Login
   * Home index with list of all videos
-  * Ability to upload video
   * Video Show and playback with users comments and sidebar videos
+  * Ability to upload video
+  * User Creation and Login
+
 
 * Video Index
 ![Index_Image](https://github.com/jonathanbgjo/Andromedia/blob/master/app/assets/images/index.png)
@@ -31,6 +32,7 @@ Andromedia is a YouTube Clone where all your dreams can come true through media.
 ![Login_Image](https://github.com/jonathanbgjo/Andromedia/blob/master/app/assets/images/login.png)
 
 * Nav Bar Dropdown Menu
+
 ![Dropdown_Image](https://github.com/jonathanbgjo/Andromedia/blob/master/app/assets/images/dropdown.png)
 
 
