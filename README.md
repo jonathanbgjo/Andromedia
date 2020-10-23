@@ -6,16 +6,23 @@ Andromedia is a YouTube Clone where all your dreams can come true through media.
 * Technologies
 
    Ruby on Rails 
+   
    React
+   
    Redux
+   
    Postgresql
+   
    Active Record
 
 * MVP
 
    User Creation and Login
+   
    Home index with list of all videos
+   
    Ability to upload video
+   
    Video Show and playback with users comments and sidebar videos
 
 * Video Index
@@ -37,8 +44,11 @@ Andromedia is a YouTube Clone where all your dreams can come true through media.
 * Future Implementations
 
    Search functionality
+   
    User profile with their uploads and comments
+   
    Recommended Videos
+   
    Like videos and/or comments
 
 
