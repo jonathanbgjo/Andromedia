@@ -1,25 +1,29 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import VideoShow from './video_show.jsx'
-import { fetchVideo, fetchVideos } from '../../actions/video_actions'
+import { fetchVideo, fetchVideos} from '../../actions/video_actions'
+import {fetchComments, createComment} from '../../actions/comment_actions'
 const mapStateToProps = (state, {match}) => {
     const videoId = parseInt(match.params.videoId);
     // const video = selectVideo(state.entities, videoId);
     // const comments = selectCommentsForVideo(state.entities, video);
     // console.log(videoId)
+    console.log(state.entities)
     return {
         //params.match.id
         video:state.entities.videos[videoId],
         currentUser: state.entities.users[state.session.id],
-        videos:state.entities.videos
+        videos:state.entities.videos,
+        comments: state.entities.comments
     };
 };
 
 const mapDispatchToProps = dispatch => ({
     fetchVideo: (id) => dispatch(fetchVideo(id)),
-    fetchVideos: () => dispatch(fetchVideos())
-
-    // logout: () => dispatch(logout())
+    fetchVideos: () => dispatch(fetchVideos()),
+    fetchComments: videoId => dispatch(fetchComments(videoId)),
+    createComment: comment => dispatch(createComment(comment))
+    // deleteComment: comment => dispatch(deleteComment(comment))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(VideoShow);

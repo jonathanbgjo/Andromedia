@@ -8,7 +8,7 @@ require 'open-uri'
 #   Character.create(name: 'Luke', movie: movies.first)
 User.delete_all
 
-# Comment.delete_all
+Comment.delete_all
 Video.delete_all
 # Like.delete_all
 
@@ -187,3 +187,23 @@ video15.video_file.attach(io:vid15, filename:'tomnjerry.mp4')
 video15.thumbnail.attach(io:thumb15, filename:'tomnjerry.jpg')
 
 
+comment1 = Comment.create!(body: "Dude, it's a joke relax!", author_id: u1.id, video_id: video1.id)
+comment2 = Comment.create!(body: "I lack creativity so its the same comment everywhere", author_id: henry.id, video_id: video1.id)
+comment3 = Comment.create!(body: "Dude, it's a joke relax!", author_id: celine.id, video_id: video2.id)
+comment4 = Comment.create!(body: "I lack creativity so its the same comment everywhere", author_id: u1.id, video_id: video2.id)
+comment5 = Comment.create!(body: "Dude, it's a joke relax!", author_id: cedric.id, video_id: video3.id)
+comment6 = Comment.create!(body: "I lack creativity so its the same comment everywhere", author_id: paul.id, video_id: video3.id)
+comment7 = Comment.create!(body: "Dude, it's a joke relax!", author_id: celine.id, video_id: video7.id)
+comment8 = Comment.create!(body: "I lack creativity so its the same comment everywhere", author_id: paul.id, video_id: video7.id)
+comment9 = Comment.create!(body: "Dude, it's a joke relax!", author_id: cedric.id, video_id: video9.id)
+comment10 = Comment.create!(body: "I lack creativity so its the same comment everywhere", author_id: henry.id, video_id: video9.id)
+comment11 = Comment.create!(body: "Dude, it's a joke relax!", author_id: celine.id, video_id: video11.id)
+comment12 = Comment.create!(body: "I lack creativity so its the same comment everywhere", author_id: paul.id, video_id: video11.id)
+comment13 = Comment.create!(body: "Dude, it's a joke relax!", author_id: celine.id, video_id: video13.id)
+comment14 = Comment.create!(body: "I lack creativity so its the same comment everywhere", author_id: henry.id, video_id: video13.id)
+comment15 = Comment.create!(body: "Dude, it's a joke relax!", author_id: rayden.id, video_id: video6.id)
+comment16 = Comment.create!(body: "I lack creativity so its the same comment everywhere", author_id: rayden.id, video_id: video6.id)
+comment17 = Comment.create!(body: "Dude, it's a joke relax!", author_id: rayden.id, video_id: video5.id)
+comment18 = Comment.create!(body: "I lack creativity so its the same comment everywhere", author_id: paul.id, video_id: video5.id)
+comment19 = Comment.create!(body: "Dude, it's a joke relax!", author_id: rayden.id, video_id: video4.id)
+comment20 = Comment.create!(body: "I lack creativity so its the same comment everywhere", author_id: henry.id, video_id: video4.id)

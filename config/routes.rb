@@ -4,8 +4,10 @@ Rails.application.routes.draw do
     # resources :benches, only: [:index, :show, :create]
     # resources :reviews, only: [:create]
     resource :user, only: [:create, :show]
-    resource :session, only: [:create, :destroy, :show]
-    resources :videos, onky: [:show, :create, :index, :destroy]
+    resource :session, only: [:create, :destroy]
+    resources :videos, onky: [:show, :create, :index, :destroy] do 
+      resources :comments, except: [:new, :edit]
+    end
     # resource :favorites, only: [:create, :destroy]
   end
   root "static_pages#root"

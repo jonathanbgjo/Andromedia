@@ -62,7 +62,8 @@ class Nav extends React.Component {
                                 <h3>{this.props.currentUser.username}</h3> 
                                 <p>{this.props.currentUser.email}</p> 
                             </li>
-                            <li><Link to={`/user/${this.props.currentUser.id}`}>Profile</Link></li>
+                            {/* <li><Link to={`/user/${this.props.currentUser.id}`}>Profile</Link></li> */}
+                            <li><Link to="/">Home</Link></li>
                             <li><Link to="/videos/new">Upload</Link></li>
                             <li><a href="https://www.linkedin.com/in/jonjo0721/">LinkedIn</a></li>
                             <li><a href="https://github.com/jonathanbgjo">Github</a></li>

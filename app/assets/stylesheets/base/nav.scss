@@ -351,6 +351,21 @@ textarea{
     // justify-content: space-evenly;
 }
 
+//////////////////show comment index item
+
+.commentIndexItem{
+    display:flex;
+    flex-direction:row;
+}
+.commentIndexItemText{
+    display:flex;
+    flex-direction: column;
+    margin-left:8px;
+}
+.commentAuthor{
+    font-weight:bold;
+}
+
 
 
 
