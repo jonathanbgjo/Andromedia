@@ -88,7 +88,7 @@ li:hover {
     // vertical-align: center;;
     background-color:ghostwhite;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     height:100%;
     width:100%;
 }
@@ -97,7 +97,7 @@ li:hover {
     flex-direction: column;
     align-items: flex-start;
     width:650px;
-    padding-left:20%;
+    padding-left:40%;
     height:100%;
 }
 .formTitle{
@@ -119,10 +119,9 @@ li:hover {
     background-color: ghostwhite;
 }
 .formVideo{
-    height:300px;
+    // height:300px;
     width:100%;
     display:flex;
-    // display:flex;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -142,21 +141,21 @@ li:hover {
 .videoPreview{
     display:flex;
 }
-.deleteButton{
-    margin: 8px 0;
-    box-sizing: border-box;
-    background-color: #E0FFFF;
-    border-color: #1E90FF;
-    border-radius: 5px;
-    width: 275px;
-    height: 45px;
-    color: #1E90FF;
-    font-size: 17px;
-    // text-align: center;
-    vertical-align: center;
-    border:1px solid blue
+// .deleteButton{
+//     margin: 8px 0;
+//     box-sizing: border-box;
+//     background-color: #E0FFFF;
+//     border-color: #1E90FF;
+//     border-radius: 5px;
+//     width: 275px;
+//     height: 45px;
+//     color: #1E90FF;
+//     font-size: 17px;
+//     // text-align: center;
+//     vertical-align: center;
+//     border:1px solid blue
 
-}
+// }
 
 
 
@@ -350,6 +349,9 @@ textarea{
     flex-direction:row;
     // justify-content: space-evenly;
 }
+.deleteSubmit{
+    padding-left:40%;
+}
 
 //////////////////show comment index item
 
@@ -365,7 +367,18 @@ textarea{
 .commentAuthor{
     font-weight:bold;
 }
-
+.commentContainer{
+    // display:flex;
+}
+.commentForm{
+    width:94%;
+    display:flex;
+    flex-direction: column;
+}
+.commentSubmit{
+    margin-top:-9px;
+    margin-right:5px;
+}
 
 
 

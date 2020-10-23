@@ -143,7 +143,7 @@ class VideoForm extends React.Component {
                         <h4>Upload Video</h4> 
                     <label htmlFor="" className="formVideo" >
                         <input type="file" onChange={this.handleVideoFile.bind('videoFile')} />
-                        {videoPreview}
+                        {/* {videoPreview} */}
 
                     </label>
                     <label className="submitForm">
@@ -151,7 +151,7 @@ class VideoForm extends React.Component {
                         
                     </label>
                 </form>
-                <form onSubmit={(e) => { this.handleDelete() }}>
+                <form onSubmit={(e) => { this.handleDelete() }} className="deleteSubmit">
                     {this.props.formType === "Update Video" ? <input type="submit" value="Delete Video"  /> : ""}
                 </form>
 

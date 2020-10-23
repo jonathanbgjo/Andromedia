@@ -40,13 +40,14 @@ class CommentIndex extends React.Component {
         
         return(
             <div className = "commentsContainer">
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} >
                     <input type="text" 
                     value={this.state.body} 
                     onChange={e=>this.handleChange(e)}
                     placeholder="Enter Comment here"
+                    className="commentForm"
                     />
-                    <input type="submit" value="create comment"/>
+                    <input type="submit" className="commentSubmit" value="create comment"/>
                 </form>
                 {comments}
             </div>
