@@ -17,7 +17,7 @@ Andromedia is a YouTube Clone where all your dreams can come true through media.
 ⋅⋅* Video Show and playback with users comments and sidebar videos
 
 * Video Index
-![Index_Image](index.png)
+![Index_Image](/app/assets/images/index.png)
 
 * Video Show
 
