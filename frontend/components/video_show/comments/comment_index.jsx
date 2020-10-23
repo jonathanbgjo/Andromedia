@@ -8,6 +8,8 @@ class CommentIndex extends React.Component {
             body: ""
         }
         this.handleSubmit=this.handleSubmit.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+        console.log(this.props)
     }
     handleChange(e){
         this.setState({
@@ -15,7 +17,13 @@ class CommentIndex extends React.Component {
         })
     }
     handleSubmit(){
-        let comment = this.state
+        let comment = this.state;
+        comment.video_id = this.props.video.id
+        this.props.createComment(comment)
+        this.setState({
+            body: ""
+        })
+        this.props.fetchVideo(this.props.video.id)
     }
     componentDidMount(){
         this.props.fetchComments(this.props.video.id)

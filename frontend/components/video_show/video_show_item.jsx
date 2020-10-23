@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import Datetime from 'react-datetime';
 const VideoShowItem = ({ video }) => {
-    // console.log(video)
     let dateString = dateUploaded(video.created_at)
     let temp = ""
     if (video.title.length > 40) {

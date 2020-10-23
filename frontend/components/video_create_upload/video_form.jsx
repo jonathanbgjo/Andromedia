@@ -23,8 +23,6 @@ class VideoForm extends React.Component {
     }
 
     componentDidMount() {
-        // console.log(this.props.video)
-        // debugger;
         this.props.fetchVideo(this.props.match.params.videoId)
             .then( () =>{
                 this.setState({

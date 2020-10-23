@@ -10,12 +10,10 @@ class VideoShow extends React.Component {
         super(props)
     }
     componentDidMount() {
-        // console.log(this.props.videoId)
         this.props.fetchVideo(this.props.match.params.videoId);
         this.props.fetchVideos();
         this.props.fetchComments();
     }
-    
     //to refresh when you click a new video on the side.
     componentDidUpdate(prevProps){
         if(prevProps.match.params.videoId !== this.props.match.params.videoId){
@@ -23,12 +21,10 @@ class VideoShow extends React.Component {
         }
     }
     render() {
-        console.log(this.props.comments)
         let dateString = ""
         if(this.props.video){
             dateString = dateUploaded(this.props.video.created_at)
         }
-        // console.log(this.props.videos)
         let videos = Object.values(this.props.videos).map((video) => {
             if(video.id === this.props.video.id){
 
@@ -37,10 +33,6 @@ class VideoShow extends React.Component {
                 return <VideoShowItem key={video.id} video={video} />
             }
         })
-        // console.log(this.props)
-        // console.log(this.props.currentUser)
-        // console.log(this.props.video)
-        // let video = this.props.video[0]
         if(!this.props.video){ return null}
         return (
         <div className="showPage">
@@ -84,6 +76,7 @@ class VideoShow extends React.Component {
                     <CommentIndex
                     fetchVideo = {this.props.fetchVideo}
                     fetchComments = {this.props.fetchComments}
+                    createComment = {this.props.createComment}
                     video = {this.props.video}
                     currentUser = {this.props.currentUser}
                     comments = {this.props.comments}
