@@ -20,15 +20,17 @@ Andromedia is a YouTube Clone where all your dreams can come true through media.
 ![Index_Image](https://github.com/jonathanbgjo/Andromedia/blob/master/app/assets/images/index.png)
 
 * Video Show
-
+![Show_Image](https://github.com/jonathanbgjo/Andromedia/blob/master/app/assets/images/showpage.png)
 
 * Video Upload
-
+![Upload_Image](https://github.com/jonathanbgjo/Andromedia/blob/master/app/assets/images/uploadmkdown.png)
 
 * User Login
-
+![Login_Image](https://github.com/jonathanbgjo/Andromedia/blob/master/app/assets/images/login.png)
 
 * Nav Bar Dropdown Menu
+![Dropdown_Image](https://github.com/jonathanbgjo/Andromedia/blob/master/app/assets/images/dropdown.png)
+
 
 * Future Implementations
 ⋅⋅* Search functionality
