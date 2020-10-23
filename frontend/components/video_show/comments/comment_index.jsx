@@ -28,7 +28,11 @@ class CommentIndex extends React.Component {
     componentDidMount(){
         this.props.fetchComments(this.props.video.id)
     }
-
+    // componentDidUpdate(prevProps){
+    //     if (prevProps.match.params.videoId !== this.props.match.params.videoId) {
+    //         this.props.fetchComments(this.props.video.id)
+    //     }
+    // }
     render(){
         let comments = Object.values(this.props.comments).map((comment) => {
             return <CommentIndexItem key={comment.id} comment={comment} />

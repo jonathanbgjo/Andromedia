@@ -12,12 +12,13 @@ class VideoShow extends React.Component {
     componentDidMount() {
         this.props.fetchVideo(this.props.match.params.videoId);
         this.props.fetchVideos();
-        this.props.fetchComments();
+        this.props.fetchComments(this.props.match.params.videoId);
     }
     //to refresh when you click a new video on the side.
     componentDidUpdate(prevProps){
         if(prevProps.match.params.videoId !== this.props.match.params.videoId){
             this.props.fetchVideo(this.props.match.params.videoId);
+            this.props.fetchComments(this.props.match.params.videoId);
         }
     }
     render() {
