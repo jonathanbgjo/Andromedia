@@ -16,7 +16,8 @@ class CommentIndex extends React.Component {
             body: e.currentTarget.value
         })
     }
-    handleSubmit(){
+    handleSubmit(e){
+        e.preventDefault();
         let comment = this.state;
         comment.video_id = this.props.video.id
         this.props.createComment(comment)
@@ -40,7 +41,7 @@ class CommentIndex extends React.Component {
         
         return(
             <div className = "commentsContainer">
-                <form onSubmit={this.handleSubmit} >
+                <form onSubmit={e=>this.handleSubmit(e)} >
                     <input type="text" 
                     value={this.state.body} 
                     onChange={e=>this.handleChange(e)}
