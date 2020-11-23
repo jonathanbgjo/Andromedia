@@ -46,14 +46,14 @@ class VideoShow extends React.Component {
                     className ="videoPlayer"
                     autoPlay={true}
                     // width={1275}
-                    height={720}
+                    // height={720}
                     >
                 </Player>
                 
                 <p className="showTitle">{this.props.video.title}</p>
                 <div className="showDetails">
                     <div >
-                    <p>{this.props.video.views} Views  • {dateString}</p>
+                    <p>{this.props.video.views} Views  •  {dateString}</p>
                     </div>
                     <div className="likesEditButton">
                             {this.props.currentUser ? (

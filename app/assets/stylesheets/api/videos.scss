@@ -1,3 +1,249 @@
 // Place all the styles related to the api/videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+///////////////////Video index
+.videoIndexContainer{
+    display:flex;
+    flex-wrap: wrap;
+    width:85vw;
+    height:100%;
+    // align-items: center;
+    padding-top:75px;
+    column-count: 4;
+    padding-left:325px;
+    background-color:GhostWhite;
+}
+.indexVideoDetails{
+    display:flex;
+    margin-bottom:10px;
+}
+.videoIndexItem{
+    width:22%;
+    // vmin: 10%;
+    // height:5%;
+    margin: 1px;
+    font-size:14px;
+    padding-left:15px;
+    background-color:ghostwhite;
+}
+.thumbnail{
+    width:100%;
+    height:60%;
+    display:block;
+}
+.videoDetails{
+}
+.videoTitle{
+    width: 100%;
+    flex-wrap: wrap;
+    font-size:16px;
+    font-weight:500;
+    height:1%;
+    max-height: 15px;
+    margin-bottom:7px;
+}
+.videoUploader{
+    text-transform: capitalize;
+    margin-bottom: -3px;
+    float:left;
+    color:#606060;
+}
+.indexPfp{
+    display:flex;
+    border-radius:50px;
+    background-color: ghostwhite;
+    margin-top:30px;
+}
+.indexPfp > img {
+    width: 45px;
+    height: 35px;
+    margin-left:7px;
+}
+.videoIndexItemText{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    margin-left:20px;
+    overflow:hidden;
+    margin-top: 0;
+    font-size:12px;
+    color:#606060;
+}
+.videoStats{
+    display:flex;
+    flex-direction: row;
+    margin-top: -10px;
+}
+.videoStats > p{
+    padding-right:10px;
+}
+
+
+
+
+
+
+
+////////////Video show
+.videoContainer{
+    padding-top:75px;
+    padding-left:100px;
+    width: 80.5%;
+    background: ghostwhite;
+}
+
+
+.showTitle{
+    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: 525;
+    height:1px;
+}
+.showDetails{
+    display:flex;
+    border-bottom: 1px solid grey;
+    font-size:16px; 
+    justify-content: space-between;
+    width:94%;
+    height:100px;
+}
+.showUnderVideo{
+    margin-top:20px;
+    display:flex;
+    vertical-align: top;
+    border-bottom: 1px solid grey;
+    width:94%;
+    flex-direction: row;
+}
+.showPfp{
+    height:48px;
+    width:48px;
+}
+.userDescription{
+    margin-left:15px;
+    height:160px;
+}
+.showUser{
+    margin-top:2px;
+    text-transform: capitalize;
+    font-weight:549;
+    font-size:15px;
+    padding-bottom:40px;    
+}
+textarea{
+     width:83.9%
+}
+.editButton{
+    border:1px solid #065fd4;
+    padding-top:9px;
+    padding-bottom:9px;
+    padding-left:15px;
+    padding-right:15px;
+    width:50px;
+    height:20px;
+    background-color: #065fd4;
+    color:white;
+    font-size:16px;
+    right:10px;
+    border-radius:3px;
+    margin-left:162px;
+}
+.showPage{
+    display:flex;
+    flex-direction:row;
+    background-color: ghostwhite;
+}
+.sideVideos{
+    right:100px;
+    padding-top:75px;
+    width:19.5%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    margin-right:75px;
+}
+.videoShowItem{
+    height:94px;
+    width:402px;
+    display:flex;
+    flex-direction: row;
+    padding-bottom:7px;
+}
+.showItemThumbnail{
+    width:168px;
+    height:94px;
+}
+.videoShowItemText{
+    display:flex;
+    flex-direction:column;
+    height:94px;
+    font-size:12px;
+    padding-left:5px;
+    width:202px;
+}
+.videoShowItemStats{
+    display:flex;
+    flex-direction:row;
+}
+.deleteSubmit{
+    padding-left:40%;
+}
+
+
+////video form
+.videoFormContainer{
+    padding-top:150px;
+    background-color:ghostwhite;
+    display:flex;
+    flex-direction: column;
+    height:100%;
+    width:100%;
+}
+.videoForm{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:650px;
+    padding-left:40%;
+    height:100%;
+}
+.formTitle{
+    width:500px;
+    height:75px;
+}
+.formDescription{
+    width:500px;
+    height:150px;
+}
+.formThumb{
+    display:flex;
+    flex-direction: column;
+    height:250px;
+    justify-content: space-between;
+    width:100%;
+}
+.formThumb > input{
+    background-color: ghostwhite;
+}
+.formVideo{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.formVideo > input {
+    background-color:ghostwhite;
+}
+.formThumb > p{
+    border:1px solid white;
+    height:200px;
+    width:200px;
+}
+.submitForm{
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+}
+.videoPreview{
+    display:flex;
+}

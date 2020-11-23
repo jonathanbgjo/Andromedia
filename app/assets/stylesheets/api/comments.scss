@@ -1,3 +1,27 @@
 // Place all the styles related to the api/comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//////////////////show comment index item
+
+.commentIndexItem{
+    display:flex;
+    flex-direction:row;
+}
+.commentIndexItemText{
+    display:flex;
+    flex-direction: column;
+    margin-left:8px;
+}
+.commentAuthor{
+    font-weight:bold;
+}
+
+.commentForm{
+    width:94%;
+    display:flex;
+    flex-direction: column;
+}
+.commentSubmit{
+    margin-top:-9px;
+    margin-right:5px;
+}

@@ -1,3 +1,101 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//////////////Session
+.login-form-container{
+    margin: 0% auto;
+    border: 1px solid grey;
+    width: 550px;
+    height: 550px;
+    margin-top: 200px;
+    border-radius: 15px;
+}
+.login-form-box{
+    width:100%;
+    margin: 0% auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 350px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom:50px;
+}
+.login-input{
+    padding-left:20px;
+}
+.login--logo{
+    padding-top:15px;
+    display:flex;
+    align-items:center;
+    margin: 0% auto;
+    width:100px;
+    height:75px;
+}
+.formLinks{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: 0px;
+    top:10px;
+    margin-top:18px;
+    flex-direction: row;
+    
+}
+.formLinks > a {
+    text-decoration: none;
+    color: #1E90FF;
+    border-radius: 5px;
+    width: 150px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    top:50%;
+    font-weight: bolder;
+}
+
+.session-submit{
+    display:block;
+    background-color: #1E90FF;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    width:75px;
+    height:40px;
+    margin: 0% auto;
+    text-align: center;
+    margin-top:20px;
+
+}
+.demo{
+    display:block;
+    background-color: #1E90FF;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    width:75px;
+    height:40px;
+    margin: 0% auto;
+    text-align: center;
+}
+.loginErrors{
+    color:red;
+    height: 20px;
+    width:100%;
+    font-size:16;
+}
+.errors{
+    color:red;
+    height: 20px;
+    width:100%;
+    font-size:16;
+}
