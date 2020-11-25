@@ -17,7 +17,7 @@ section {
     border-radius:10px;
 }
 body{
-    background-color: white;
+    background-color: ghostwhite;
 }
 
 input{
@@ -106,7 +106,7 @@ li:hover {
     z-index:9999;
     width: 100%;
     justify-content: space-between;
-    background: ghostWhite;
+    background: white;
     align-items:center;
     vertical-align: center;
     margin: 0;
@@ -196,8 +196,9 @@ li:hover {
 }
 .sideBarContainer{
     position:fixed;
-    width:12.5%;
+    width:9vw;
     height:100%;
+    margin-left:-5px;
 }
 .sideBar{
     z-index:9999;
@@ -208,11 +209,12 @@ li:hover {
     width:100%;
     height:100%;
     padding-top:15px;
-    padding-left:10px;
+    // padding-left:10px;
     border-right: 1px solid ghostwhite;
-    background-color:ghostWhite;
-    margin-top:44px;
+    background-color:white;
+    margin-top:40px;
     border-bottom: 1px solid grey;
+    // border-right: 1px solid lightgrey;
 }
 .sideBar > ul > li > img{
     margin-bottom:-3px;
