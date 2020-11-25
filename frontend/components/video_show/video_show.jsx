@@ -46,8 +46,8 @@ class VideoShow extends React.Component {
                     fluid={false}
                     className ="videoPlayer"
                     autoPlay={true}
-                    // width={1275}
-                    // height={720}
+                    width= {"93.6%"}
+                    height={"50%"}
                     >
                 </Player>
                 

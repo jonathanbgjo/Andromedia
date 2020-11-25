@@ -23,12 +23,12 @@ body{
 input{
   margin: 8px 0;
   box-sizing: border-box;
-  background-color: #E0FFFF;
-  border-color: #1E90FF;
+  background-color: lightgray;
+//   border-color: white;
   border-radius:5px;
   width: 275px;
   height:45px;
-  color:#1E90FF;
+//   color:white;
   font-size:17px;
 }
 .hidden {
@@ -101,11 +101,12 @@ li:hover {
 ///////////////////// Nav
 .top-nav {
     display: flex;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid ghostWhite;
     position: fixed;
+    z-index:9999;
     width: 100%;
     justify-content: space-between;
-    background: white;
+    background: ghostWhite;
     align-items:center;
     vertical-align: center;
     margin: 0;
@@ -145,7 +146,7 @@ li:hover {
     position: fixed;
     background: white;
     overflow:hidden;
-    margin-top:-8px;
+    margin-top:-17px;
     top: 68px;
     right: 35px;
     width: 300px;
@@ -199,6 +200,8 @@ li:hover {
     height:100%;
 }
 .sideBar{
+    z-index:9999;
+
     display:flex;
     flex-direction: column;
     align-items: left;
@@ -207,7 +210,7 @@ li:hover {
     padding-top:15px;
     padding-left:10px;
     border-right: 1px solid ghostwhite;
-    background-color:white;
+    background-color:ghostWhite;
     margin-top:44px;
     border-bottom: 1px solid grey;
 }
