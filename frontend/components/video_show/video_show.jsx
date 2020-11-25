@@ -39,6 +39,7 @@ class VideoShow extends React.Component {
         <div className="showPage">
             <div className="videoContainer">
                 <Player
+                    className="video"
                     // playsInline
                     poster={this.props.video.thumbnailUrl}
                     src={this.props.video.videoUrl}
@@ -73,7 +74,7 @@ class VideoShow extends React.Component {
                     </div>
                 </div>
 
-                <div className="commentsContainer">
+                <div>
                     <CommentIndex
                     fetchVideo = {this.props.fetchVideo}
                     fetchComments = {this.props.fetchComments}

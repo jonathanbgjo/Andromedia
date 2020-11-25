@@ -1,6 +1,5 @@
 import React from 'react'
 import CommentIndexItem from './comment_index_item.jsx'
-
 class CommentIndex extends React.Component {
     constructor(props){
         super(props)
@@ -20,6 +19,8 @@ class CommentIndex extends React.Component {
         e.preventDefault();
         let comment = this.state;
         comment.video_id = this.props.video.id
+        console.log("creating comment!")
+        console.log(comment)
         this.props.createComment(comment)
         this.setState({
             body: ""
@@ -36,7 +37,7 @@ class CommentIndex extends React.Component {
     // }
     render(){
         let comments = Object.values(this.props.comments).map((comment) => {
-            return <CommentIndexItem key={comment.id} comment={comment} />
+            return <CommentIndexItem key={comment.id} comment={comment}/>
         })
         
         return(

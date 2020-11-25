@@ -1,3 +1,5 @@
+// @import "~video-react/styles/scss/video-react";
+
 // Place all the styles related to the api/videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -13,9 +15,10 @@
     padding-left:325px;
     background-color:GhostWhite;
 }
-.indexVideoDetails{
+.indexVideoDetails{ 
     display:flex;
-    margin-bottom:10px;
+    // margin-bottom:10px;
+    margin-bottom:-5px;
 }
 .videoIndexItem{
     width:22%;
@@ -85,10 +88,13 @@
 
 
 ////////////Video show
+.video{
+    width:100vw;
+}
 .videoContainer{
     padding-top:75px;
     padding-left:100px;
-    width: 80.5%;
+    width: 80vw;
     background: ghostwhite;
 }
 
