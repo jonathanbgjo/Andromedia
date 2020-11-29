@@ -1,5 +1,7 @@
 import React from 'react'
 import CommentIndexItem from './comment_index_item.jsx'
+import { Link } from 'react-router-dom';
+
 class CommentIndex extends React.Component {
     constructor(props){
         super(props)
@@ -43,16 +45,17 @@ class CommentIndex extends React.Component {
         return(
             <div className = "commentsContainer">
                 <p> {comments.length} Comments</p>
-
-                <form onSubmit={e=>this.handleSubmit(e)} >
-                    <input type="text" 
-                    value={this.state.body} 
-                    onChange={e=>this.handleChange(e)}
-                    placeholder="Add a public comment..."
-                    className="commentForm"
+                {this.props.currentUser ? <form onSubmit={e => this.handleSubmit(e)} >
+                    <input type="text"
+                        value={this.state.body}
+                        onChange={e => this.handleChange(e)}
+                        placeholder="Add a public comment..."
+                        className="commentForm"
                     />
-                    <input type="submit" className="commentSubmit" value="COMMENT"/>
-                </form>
+                    <input type="submit" className="commentSubmit" value="COMMENT" />
+                </form> : <Link to="/login">Sign in to comment </Link>}
+                
+
                 {comments}
             </div>
         )

@@ -16,7 +16,7 @@ const removeVideo = videoId => ({
     type: REMOVE_VIDEO,
     videoId
 })
-export const fetchVideos = () => dispatch => VideoAPIUtil.fetchAllVideos()
+export const fetchVideos = (query) => dispatch => VideoAPIUtil.fetchAllVideos(query)
     .then(videos => dispatch(receiveVideos(videos)))
     // ,
     // err => (dispatch(receiveErrors(err.responseJSON))))

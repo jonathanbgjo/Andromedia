@@ -6,7 +6,7 @@ class VideoIndex extends React.Component {
         super(props)
     }
     componentDidMount(){
-        this.props.fetchVideos();
+        this.props.fetchVideos("");
     }
     render(){
             let videos = Object.values(this.props.videos).map( (video) => {
