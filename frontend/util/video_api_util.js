@@ -1,8 +1,8 @@
-export const fetchAllVideos = (query) => (
+export const fetchAllVideos = (query= "") => (
     $.ajax({
         method: 'GET',
         url: `/api/videos/`,
-        data: query,
+        data: {query: query}
     })
 );
 

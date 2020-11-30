@@ -1,9 +1,17 @@
 class Api::VideosController < ApplicationController
     def index
+        puts "HEHEHEHEHE"
+        puts params[:query]
+        puts params
+        puts "BEBEHEHEHE"
         if params[:query] == ""
             @videos = Video.all
         else
+        puts params[:query]
+
             @videos = Video.where("title LIKE ?", "%#{params[:query]}%" )
+            
+            puts @videos
         end
 
         render :index
@@ -46,6 +54,6 @@ class Api::VideosController < ApplicationController
     private
 
     def video_params
-        params.require(:video).permit(:title,:description,:thumbnail,:video_file)
+        params.require(:video).permit(:title,:description,:thumbnail,:video_file, :query)
     end
 end

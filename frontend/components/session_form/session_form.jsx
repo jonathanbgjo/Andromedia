@@ -70,7 +70,7 @@ class SessionForm extends React.Component {
                                 onChange={this.update('username')}
                                 className="login-input"
                                 />
-                        </label>
+                        </label>x   
                     {this.props.formType === "Login" ? "" : <div className="errors"> {this.renderSignUpErrors('username')}</div> } 
                     {this.props.formType === "Login" ? "" : <label>
                         <input placeholder="Enter Email" type="text"

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchContainer from './search_nav/search_nav_container'
+
 class Nav extends React.Component { 
     constructor(props){
         super(props);
@@ -45,8 +47,7 @@ class Nav extends React.Component {
             </section>
 
             <section className="search">
-                <input type="text" />
-                <img src={window.search} alt="search" className="searchIcon" />
+                <SearchContainer />
 
             </section>
             
@@ -91,8 +92,7 @@ class Nav extends React.Component {
             </section>
 
             <section className="search">
-                <input type="text" />
-                <img src={window.search} alt="search" className="searchIcon" />
+                <SearchContainer />
 
             </section>
             <div className = "navSignIn">

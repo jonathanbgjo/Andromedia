@@ -8,6 +8,7 @@ import VideoShowContainer from './video_show/video_show_container'
 import SideContainer from './nav/side_container'
 import VideoCreateContainer from './video_create_upload/video_create_container'
 import VideoUpdateContainer from './video_create_upload/video_update_container'
+import SearchContainer from './search/search_container'
 const App = () => {
     return (
     <div>
@@ -18,6 +19,7 @@ const App = () => {
             <ProtectedRoute path="/videos/:videoId/edit" component={VideoUpdateContainer} />
             <Route path="/videos/:videoId" component={VideoShowContainer} />
             {/* <Route path="/user/:userId" component={ProfileContainer} /> */}
+            <Route path="/search/:query" component={SearchContainer} />
             <Route exact path="/" component={VideoIndexContainer} />
             <Redirect to="/" path="*"/>
         </Switch>
