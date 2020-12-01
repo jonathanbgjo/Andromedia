@@ -45,14 +45,14 @@ class search extends React.Component {
         // this.props.fetchVideos(this.props.query);
     }
     render() {
-        console.log(this.props.videos)
+        // console.log(this.props.videos)
         let videos = Object.values(this.props.videos).map((video) => {
             return <VideoIndexItem key={video.id} video={video} />
         })
         let size = Object.size(this.props.videos)
         return (
             <div> 
-                { size >= 1 ? <div className="videoIndexContainer"> {videos} </div> : <p>No videos matches your search</p>}
+                { size >= 1 ? <div className="videoIndexContainer"> {videos} </div> : <p className="noResult"> No videos matches your search</p>}
             </div>
             
         )

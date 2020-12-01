@@ -48,7 +48,6 @@ class Nav extends React.Component {
 
             <section className="search">
                 <SearchContainer />
-
             </section>
             
             <section className="button_container" ref={this.container}>
@@ -70,7 +69,6 @@ class Nav extends React.Component {
                             <li><a href="https://www.linkedin.com/in/jonjo0721/">LinkedIn</a></li>
                             <li><a href="https://github.com/jonathanbgjo">Github</a></li>
                             <li><a href="hhttps://angel.co/u/jon-jo">Angel List</a></li>
-
                             {/* <li> <p onClick={this.props.switchTheme} >Switch Theme</p></li> */}
                             <li> <a onClick={this.props.logout}>Sign out</a></li>
                         </ul>
