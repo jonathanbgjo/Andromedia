@@ -9,7 +9,7 @@ class Search extends React.Component {
             inputValue: ''
         };  
         this.handleSubmit = this.handleSubmit.bind(this);
-
+        this.handleClick = this.handleClick.bind(this)
     }
     componentDidMount() {
         // this.props.fetchVideos("");
@@ -21,7 +21,10 @@ class Search extends React.Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        // this.props.history.push(`/${this.state.inputValue}`)
+    }
+    handleClick(e){
+        this.props.history.push(`/${this.state.inputValue}`)
+
     }
     render() {
         // let videos = Object.values(this.props.videos).map((video) => {
@@ -31,8 +34,8 @@ class Search extends React.Component {
         return (
             // <div className="videoIndexContainer">{videos}</div>
             <div>
-                <input value={this.state.inputValue} onChange={e => this.updateInputValue(e)} />
-                <Link to={`/search/${this.state.inputValue}`} > Search</Link>
+                <input className = "searchInput" placeholder = "Search" value={this.state.inputValue} onChange={e => this.updateInputValue(e)} />
+                <img className="searchIcon" src={window.search} alt="" onClick={() => handleClick()}/>
             </div>
         )
     }
