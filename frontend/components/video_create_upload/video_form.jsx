@@ -135,7 +135,7 @@ class VideoForm extends React.Component {
                             <input type="file" onChange={this.handleThumbnailFile.bind('thumbnailFile')} />
                             {/* <p>Image Preview:</p> */}
                             {/* <p> {thumbPreview == null ? <img height="200px" width="200px" src={window.thumbnail} /> : thumbPreview } </p> */}
-                            <p> {thumbPreview}</p>
+                            {thumbPreview}
                         </div>
                         
                     </label>

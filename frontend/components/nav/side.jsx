@@ -16,7 +16,7 @@ const Side = ()=>{
                         <Link to="/videos/new">Upload</Link>
                     </li>
                     <li>
-                        <img src={window.gh} alt="gh" className="sideImg" />
+                        <img src={window.website} alt="gh" className="sideImg" />
 
                         <a href="https://jonathanbgjo.com/">Portfolio</a>
                     </li>
@@ -30,7 +30,7 @@ const Side = ()=>{
                         <a href="https://github.com/jonathanbgjo">Github</a>
                     </li>
                     <li>
-                        <img src={window.ln} alt="ln" className="sideImg" />
+                        <img src={window.aa} alt="ln" className="sideImg" />
                         <a href="https://angel.co/u/jon-jo">Angel List</a>
                     </li>
                     
