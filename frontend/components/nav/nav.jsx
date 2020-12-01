@@ -83,8 +83,8 @@ class Nav extends React.Component {
         <nav className="top-nav">
             
             <section className="nav-container-logo">
-                <Link to="/" className="welcomeTitle">
                     <img src={window.logo} alt="logo" className="welcome--logo" />
+                <Link to="/" className="welcomeTitle">
                     <h1>Andromedia</h1>
                 </Link>
             </section>

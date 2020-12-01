@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import VideoIndexItem from '../videos_index/video_index_item.jsx'
+import SideContainer from '../nav/side_container'
+
 class search extends React.Component {
     constructor(props) {
         super(props)
@@ -51,9 +53,12 @@ class search extends React.Component {
         })
         let size = Object.size(this.props.videos)
         return (
+            <>
+            <SideContainer></SideContainer>
             <div> 
                 { size >= 1 ? <div className="videoIndexContainer"> {videos} </div> : <p className="noResult"> No videos matches your search</p>}
             </div>
+            </>
             
         )
     }
