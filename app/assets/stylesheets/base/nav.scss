@@ -198,12 +198,12 @@ li:hover {
 .sideBarContainer{
     position:fixed;
     width:9vw;
+    min-width: 118px;
     height:100%;
     margin-left:-5px;
 }
 .sideBar{
     z-index:9999;
-
     display:flex;
     flex-direction: column;
     align-items: left;
@@ -215,11 +215,12 @@ li:hover {
     background-color:white;
     margin-top:40px;
     border-bottom: 1px solid grey;
+    font-size: 12px;
     // border-right: 1px solid lightgrey;
 }
 .sideBar > ul > li > img{
     margin-bottom:-3px;
-    padding-right:40px;
+    padding-right:20px;
     width:20px;
     height:20px;
     text-align: center;

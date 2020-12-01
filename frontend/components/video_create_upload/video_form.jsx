@@ -92,7 +92,7 @@ class VideoForm extends React.Component {
             })
     }
     render(){
-        const thumbPreview = this.state.thumbnailUrl ? <img height="200px" width="200px" src={this.state.thumbnailUrl} /> : null;
+        const thumbPreview = this.state.thumbnailUrl ? <img height="200px" width="200px" src={this.state.thumbnailUrl} /> : null ;
         const videoPreview = this.state.video ? <Player
             // playsInline
             poster={this.props.video.thumbnailUrl}
@@ -132,10 +132,10 @@ class VideoForm extends React.Component {
                             Select or upload a picture that shows what's in your video. A good thumbnail stands out and draws viewers' attention.
                         </p>
                         <div className="formThumb">
-                            
                             <input type="file" onChange={this.handleThumbnailFile.bind('thumbnailFile')} />
                             {/* <p>Image Preview:</p> */}
-                            <p> {thumbPreview} </p>
+                            {/* <p> {thumbPreview == null ? <img height="200px" width="200px" src={window.thumbnail} /> : thumbPreview } </p> */}
+                            <p> {thumbPreview}</p>
                         </div>
                         
                     </label>
