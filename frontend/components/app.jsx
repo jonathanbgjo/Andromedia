@@ -13,7 +13,7 @@ const App = () => {
     return (
     <div>
             <NavContainer/>
-            <Route path ="/" component={SideContainer} />
+            {/* <Route path ="/" component={SideContainer} /> */}
         <Switch>
             <ProtectedRoute path="/videos/new" component={VideoCreateContainer} />
             <ProtectedRoute path="/videos/:videoId/edit" component={VideoUpdateContainer} />

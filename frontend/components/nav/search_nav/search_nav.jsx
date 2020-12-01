@@ -33,7 +33,7 @@ class Search extends React.Component {
 
         return (
             // <div className="videoIndexContainer">{videos}</div>
-            <div>
+            <div className="searchNavContainer">
                 <input className = "searchInput" placeholder = "Search" value={this.state.inputValue} onChange={e => this.updateInputValue(e)} />
                 
                 <Link to={`/search/${this.state.inputValue}`}><img className="searchIcon" src={window.search} alt="" /></Link>

@@ -192,10 +192,11 @@ li:hover {
 // }
 .searchIcon{
     width:30px;
-    height:30px;
-    border: 1px solid grey;
+    height:28px;
+    border: 1px solid lightgrey;
     border-left: 0;
-    margin-top:7px;
+    margin-top:3px;
+    // margin-top:7px;
     // padding-top:1px;
 }
 
@@ -236,6 +237,11 @@ li:hover {
     background-color: white;
     border: 1px solid lightgrey;
     text-indent: 10px;
-    margin-top:-15px;
+    // margin-top:-15px;
 
+}
+.searchNavContainer{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
 }

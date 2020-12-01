@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import VideoIndexItem from './video_index_item.jsx'
+import SideContainer from '../nav/side_container'
 class VideoIndex extends React.Component {
     constructor(props){
         super(props)
@@ -14,7 +15,10 @@ class VideoIndex extends React.Component {
         })
         
         return(
+            <>
+            <SideContainer></SideContainer>
             <div className ="videoIndexContainer">{videos}</div>
+            </>
         )
     }
 }
