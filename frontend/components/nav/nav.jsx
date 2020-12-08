@@ -74,7 +74,6 @@ class Nav extends React.Component {
                         </ul>
                     </div>
                 )}
-
             </section>
         </nav>)
     };
