@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :videos, only: [:show, :create, :index, :destroy] do 
       resources :comments, except: [:new, :edit]
+      resources :likes, except: [:show, :edit]
     end
   end
   root "static_pages#root"
