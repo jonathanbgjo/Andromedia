@@ -1,10 +1,15 @@
 class Api::LikesController < ApplicationController
-    def create
+    def index
+            @likes = Video.find(params[:video_id]).likes
 
+            render :index
+    end
+    def create
+        
     end
 
     def destroy
-
+        
     end
 
     private
