@@ -5,6 +5,7 @@ import "../../../node_modules/video-react/dist/video-react.css";
 import {dateUploaded} from '../videos_index/video_index_item.jsx'
 import VideoShowItem from '../video_show/video_show_item.jsx'
 import CommentIndex from './comments/comment_index.jsx'
+import Likes from './likes/likes'
 class VideoShow extends React.Component {
     constructor(props) {
         super(props)
@@ -57,13 +58,14 @@ class VideoShow extends React.Component {
                     <p>{this.props.video.views} Views  •  {dateString}</p>
                     </div>
                     <div className="likesEditButton">
+
                             {this.props.currentUser ? (
                                 this.props.currentUser.id === this.props.video.uploader.id ?
                                     <Link className="editButton" to={`/videos/${this.props.match.params.videoId}/edit`}> Edit Video</Link>
                                     : ""
                             ): ""}
-                        
-                        <p>[d 294K | q 21] - Likes placement bar</p>
+                        <Likes/>
+                        {/* <p>[d 294K | q 21] - Likes placement bar</p> */}
                     </div>
                 </div>
                 <div className="showUnderVideo">
