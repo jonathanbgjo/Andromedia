@@ -59,11 +59,16 @@ class VideoShow extends React.Component {
                     </div>
                     <div className="likesEditButton">
 
+                            {/* {this.props.currentUser ? (
+                                this.props.currentUser.id === this.props.video.uploader.id ?
+                                    <Link className="editButton" to={`/videos/${this.props.match.params.videoId}/edit`}> Edit Video</Link>
+                                    : ""
+                            ): ""} */}
                             {this.props.currentUser ? (
                                 this.props.currentUser.id === this.props.video.uploader.id ?
                                     <Link className="editButton" to={`/videos/${this.props.match.params.videoId}/edit`}> Edit Video</Link>
                                     : ""
-                            ): ""}
+                            ) : ""}
                         <Likes/>
                         {/* <p>[d 294K | q 21] - Likes placement bar</p> */}
                     </div>
