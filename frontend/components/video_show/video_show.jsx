@@ -82,14 +82,22 @@ class VideoShow extends React.Component {
                 </div>
 
                 <div>
-                    <CommentIndex
+                    {/* <CommentIndex
                     fetchVideo = {this.props.fetchVideo}
                     fetchComments = {this.props.fetchComments}
                     createComment = {this.props.createComment}
                     video = {this.props.video}
                     currentUser = {this.props.currentUser}
                     comments = {this.props.comments}
-                    />
+                    /> */}
+                        <CommentIndex
+                            fetchVideo={this.props.fetchVideo}
+                            fetchComments={this.props.fetchComments}
+                            createComment={this.props.createComment}
+                            video={this.props.video}
+                            currentUser={this.props.currentUser}
+                            comments={this.props.comments}
+                        />
                 </div>
 
             </div>
