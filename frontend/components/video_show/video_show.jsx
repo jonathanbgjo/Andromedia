@@ -69,7 +69,7 @@ class VideoShow extends React.Component {
                                     <Link className="editButton" to={`/videos/${this.props.match.params.videoId}/edit`}> Edit Video</Link>
                                     : ""
                             ) : ""}
-                        <Likes/>
+                        <Likes likeVideo={this.props.likeVideo}/>
                         {/* <p>[d 294K | q 21] - Likes placement bar</p> */}
                     </div>
                 </div>

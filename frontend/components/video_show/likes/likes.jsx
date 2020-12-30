@@ -18,7 +18,8 @@ class Likes extends React.Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createComment(comment)
+        // this.props.createComment(comment)
+        this.props.likeVideo(video);
         this.setState({
             // body: ""
         })
