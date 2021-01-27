@@ -22,7 +22,7 @@ const VideoIndexItem = ({video}) =>{
                         <h4 className="videoTitle"><Link to={`/videos/${video.id}`}>{temp}</Link></h4>
                         <Link to={`/user/${video.uploader.id}`} className="videoUploader"> {video.uploader.username}</Link>
                         <div className="videoStats">
-                            <p className="videoViews">Views: {video.views}  </p>
+                            <p className="videoViews">Views : {video.views}  </p>
                             <p>▫ </p>
                             <p className="uploadDate"> {dateString}</p>
                         </div>
