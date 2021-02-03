@@ -8,16 +8,17 @@ class CommentIndexItem extends React.Component{
     }
     render(){
         let dateString = dateUploaded(this.props.comment.created_at)
-        // console.log(this.props.comment)
-        return(
-            <div className = "commentIndexItem" >
-                <img src={window.pfp} alt="pfp" className="dropPfp" />
+        let edited = this.props.comment.created_at != this.props.comment.created_at
+        if ( edited) {
+           let commentSting = <p className="commentAuthor"> {this.props.comment.author} <span className="commentDate">{dateString} </span> Edited</p>
+        }else{
+            let commentString = <p className="commentAuthor"> {this.props.comment.author} <span className="commentDate">{dateString} </span> </p>
+        }
+        console.log(this.props.comment)
+        
 
-                <div className="commentIndexItemText">
-                    <p className="commentAuthor"> {this.props.comment.author} <span className="commentDate">{dateString} </span></p>
-                    <p> {this.props.comment.body }</p>
-                </div>
-            </div>
+        return(
+            {commentString}
         )
     } 
 }
