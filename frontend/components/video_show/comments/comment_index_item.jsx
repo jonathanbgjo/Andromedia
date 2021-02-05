@@ -10,7 +10,7 @@ class CommentIndexItem extends React.Component{
         let dateString = dateUploaded(this.props.comment.created_at)
         let edited = this.props.comment.created_at != this.props.comment.created_at
         if ( edited) {
-           let commentSting = <p className="commentAuthor"> {this.props.comment.author} <span className="commentDate">{dateString} </span> Edited</p>
+            let commentSting = <p className="commentAuthor"> {this.props.comment.author} <span className="commentDate">{dateString} </span> <span className="italicized">Edited</span></p>
         }else{
             let commentString = <p className="commentAuthor"> {this.props.comment.author} <span className="commentDate">{dateString} </span> </p>
         }
