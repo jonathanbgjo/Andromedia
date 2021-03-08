@@ -18,7 +18,7 @@ const App = () => {
             <ProtectedRoute path="/videos/new" component={VideoCreateContainer} />
             <ProtectedRoute path="/videos/:videoId/edit" component={VideoUpdateContainer} />
             <Route path="/videos/:videoId" component={VideoShowContainer} />
-            {/* <Route path="/user/:userId" component={ProfileContainer} /> */}
+            <Route path="/user/:userId" component={ProfileContainer} />
             <Route path="/search/:query" component={SearchContainer} />
             <Route exact path="/" component={VideoIndexContainer} />
             <Redirect to="/" path="*"/>
