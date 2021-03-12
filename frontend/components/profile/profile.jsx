@@ -8,6 +8,12 @@ class Profile extends React.Component {
         super(props)
     }
     componentDidMount(){
+        console.log(props);
+        console.log(this.props);
+
+        this.props.currentUser;
+        console.log(this.props.logout)
+        this.props.logout();
     }
     render(){
         return(
@@ -17,6 +23,8 @@ class Profile extends React.Component {
                 <span> profile pic -- username -- # subscribers</span>
                 <span> do we want multiple tabs?</span>
                 <span> Videos you've uploaded | Videos you've liked or commented on</span>
+
+            
             </>
         )
     }
