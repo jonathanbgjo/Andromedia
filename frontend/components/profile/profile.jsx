@@ -24,7 +24,9 @@ class Profile extends React.Component {
                 <span> do we want multiple tabs?</span>
                 <span> Videos you've uploaded | Videos you've liked or commented on</span>
 
-            
+                <span> EDIT PROFILE</span>
+                <span> PLAYLISTS, other users you follow, about page</span>
+
             </>
         )
     }
