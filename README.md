@@ -35,6 +35,9 @@ Andromedia is a YouTube Clone where all your dreams can come true through media.
 
 ![Dropdown_Image](https://github.com/jonathanbgjo/Andromedia/blob/master/app/assets/images/dropdown.png)
 
+* Search Bar
+
+![Search Bar](https://github.com/jonathanbgjo/Andromedia/blob/master/app/assets/images/search.png)
 
 * Future Implementations
 
