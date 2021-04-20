@@ -46,6 +46,7 @@ Andromedia is a YouTube Clone where all your dreams can come true through media.
   * User profile with their uploads and comments
   * Recommended Videos
   * Like videos and/or comments
+  * Subscriptions
 
 
 
